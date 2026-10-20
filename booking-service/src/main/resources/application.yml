@@ -11,5 +11,6 @@ spring:
     properties:
       hibernate:
         default_schema: bookings
+    show-sql: true
   kafka:
     bootstrap-servers: localhost:9092
