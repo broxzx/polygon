@@ -52,7 +52,6 @@ public class Booking {
   @CreationTimestamp
   private OffsetDateTime createdAt;
 
-  @NotNull
   @Column(name = "updated_at", nullable = false)
   @UpdateTimestamp
   private OffsetDateTime updatedAt;
