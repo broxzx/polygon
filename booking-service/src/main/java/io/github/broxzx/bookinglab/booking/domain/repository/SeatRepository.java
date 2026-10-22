@@ -2,8 +2,9 @@ package io.github.broxzx.bookinglab.booking.domain.repository;
 
 import io.github.broxzx.bookinglab.booking.domain.entity.Booking;
 import io.github.broxzx.bookinglab.booking.domain.entity.Seat;
-import io.github.broxzx.bookinglab.booking.dto.SeatInfo;
+import io.github.broxzx.bookinglab.booking.dto.SeatDto;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,7 +14,7 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
 
   @Query(
       """
-      SELECT new io.github.broxzx.bookinglab.booking.dto.SeatInfo(
+      SELECT new io.github.broxzx.bookinglab.booking.dto.SeatDto(
             s.id,
             s.number,
             s.price,
@@ -27,5 +28,15 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
         AND s.event.id = :eventId
       ORDER BY s.id
       """)
-  List<SeatInfo> findSeatInfoByEventId(Integer eventId, List<Booking.State> activeStates);
+  List<SeatDto> findSeatDtosByEventId(Integer eventId, List<Booking.State> activeStates);
+
+  @Query(
+      """
+      SELECT s
+        FROM Seat s
+      WHERE s.id = :id
+        AND s.deleted = false
+        AND s.event.deleted = false
+      """)
+  Optional<Seat> findByIdAndDeletedFalseAndEventDeletedFalse(Integer id);
 }

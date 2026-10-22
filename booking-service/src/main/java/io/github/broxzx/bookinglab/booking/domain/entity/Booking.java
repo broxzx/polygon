@@ -3,20 +3,27 @@ package io.github.broxzx.bookinglab.booking.domain.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import java.time.OffsetDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import java.util.List;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Getter
 @Setter
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "bookings")
 public class Booking {
   public enum State {
     NEW,
     PAID,
-    CANCELLED
+    CANCELLED;
+
+    public static List<State> getActiveStates() {
+      return List.of(Booking.State.NEW, Booking.State.PAID);
+    }
   }
 
   @Id
@@ -38,11 +45,9 @@ public class Booking {
   @Column(name = "email", nullable = false, length = Integer.MAX_VALUE)
   private String email;
 
-  @NotNull
   @Column(name = "deleted", nullable = false)
-  private Boolean deleted = false;
+  private boolean deleted;
 
-  @NotNull
   @Column(name = "created_at", nullable = false)
   @CreationTimestamp
   private OffsetDateTime createdAt;

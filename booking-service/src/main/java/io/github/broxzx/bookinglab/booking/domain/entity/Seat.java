@@ -32,9 +32,8 @@ public class Seat {
   @Column(name = "price", nullable = false, precision = 10, scale = 2)
   private BigDecimal price;
 
-  @NotNull
   @Column(name = "deleted", nullable = false)
-  private Boolean deleted = false;
+  private boolean deleted = false;
 
   @NotNull
   @Column(name = "created_at", nullable = false)

@@ -22,13 +22,11 @@ public class Event {
   @Column(name = "name", nullable = false, length = Integer.MAX_VALUE)
   private String name;
 
-  @NotNull
   @Column(name = "active", nullable = false)
-  private Boolean active = true;
+  private boolean active = true;
 
-  @NotNull
   @Column(name = "deleted", nullable = false)
-  private Boolean deleted = false;
+  private boolean deleted;
 
   @NotNull
   @Column(name = "event_date", nullable = false)
