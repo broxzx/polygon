@@ -1,0 +1,9 @@
+apiVersion: 1
+
+providers:
+  - name: booking-lab
+    folder: booking-lab
+    type: file
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards
