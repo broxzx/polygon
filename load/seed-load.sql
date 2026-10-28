@@ -16,4 +16,4 @@ INSERT
 INTO bookings.seats (number, event_id, price)
 SELECT 'L-' || n, ev.id, 100.00
 FROM ev,
-     generate_series(1, 10000) AS n;t
+     generate_series(1, 50_000) AS n;

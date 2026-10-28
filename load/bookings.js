@@ -3,7 +3,7 @@ import {check} from 'k6';
 import exec from 'k6/execution';
 
 const BASE = __ENV.BASE_URL || 'http://localhost:8080';
-const EVENT_ID = __ENV.EVENT_ID || 1;
+const READ_EVENT_ID = __ENV.READ_EVENT_ID || 1;
 const FIRST_SEAT = Number(__ENV.FIRST_SEAT || 1);
 
 export const options = {
@@ -11,21 +11,27 @@ export const options = {
         read_seats: {
             executor: 'ramping-arrival-rate',
             exec: 'readSeats',
-            startRate: 5, timeUnit: '1s',
-            preAllocatedVUs: 20, maxVUs: 200,
+            startRate: 25, timeUnit: '1s',
+            preAllocatedVUs: 150, maxVUs: 1500,
             stages: [
-                {target: 20, duration: '1m'},
-                {target: 20, duration: '2m'}
+                {target: 100, duration: '15s'}, {target: 100, duration: '45s'},
+                {target: 500, duration: '15s'}, {target: 500, duration: '45s'},
+                {target: 1000, duration: '15s'}, {target: 1000, duration: '45s'},
+                {target: 2000, duration: '15s'}, {target: 2000, duration: '45s'},
+                {target: 4000, duration: '15s'}, {target: 4000, duration: '45s'},
             ],
         },
         book: {
             executor: 'ramping-arrival-rate',
             exec: 'book',
-            startRate: 1, timeUnit: '1s',
-            preAllocatedVUs: 10, maxVUs: 100,
+            startRate: 3, timeUnit: '1s',
+            preAllocatedVUs: 15, maxVUs: 1000,
             stages: [
-                {target: 5, duration: '1m'},
-                {target: 5, duration: '2m'}
+                {target: 10, duration: '15s'}, {target: 10, duration: '45s'},
+                {target: 50, duration: '15s'}, {target: 50, duration: '45s'},
+                {target: 100, duration: '15s'}, {target: 100, duration: '45s'},
+                {target: 200, duration: '15s'}, {target: 200, duration: '45s'},
+                {target: 400, duration: '15s'}, {target: 400, duration: '45s'},
             ],
         },
     },
@@ -37,7 +43,7 @@ export const options = {
 }
 
 export function readSeats() {
-    const res = http.get(`${BASE}/events/${EVENT_ID}/seats`,
+    const res = http.get(`${BASE}/events/${READ_EVENT_ID}/seats`,
         {tags: {name: 'GET /events/{id}/seats'}});
     check(res, {'seats 200': (r) => r.status === 200});
 }
