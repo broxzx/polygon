@@ -1,0 +1,1278 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: load/bookings.js
+        output: -
+
+     scenarios: (100.00%) 2 scenarios, 2500 max VUs, 5m30s max duration (incl. graceful stop):
+              * book: Up to 400.00 iterations/s for 5m0s over 10 stages (maxVUs: 15-1000, exec: book, gracefulStop: 30s)
+              * read_seats: Up to 4000.00 iterations/s for 5m0s over 10 stages (maxVUs: 150-1500, exec: readSeats, gracefulStop: 30s)
+
+
+running (0m01.0s), 0000/0165 VUs, 30 complete and 0 interrupted iterations
+book         [   0% ] 0000/0015 VUs  0m01.0s/5m0s  003.50 iters/s
+read_seats   [   0% ] 0000/0150 VUs  0m01.0s/5m0s  0030.00 iters/s
+
+running (0m02.0s), 0000/0165 VUs, 65 complete and 0 interrupted iterations
+book         [   1% ] 0000/0015 VUs  0m02.0s/5m0s  003.88 iters/s
+read_seats   [   1% ] 0000/0150 VUs  0m02.0s/5m0s  0034.93 iters/s
+
+running (0m03.0s), 0000/0165 VUs, 107 complete and 0 interrupted iterations
+book         [   1% ] 0000/0015 VUs  0m03.0s/5m0s  004.44 iters/s
+read_seats   [   1% ] 0000/0150 VUs  0m03.0s/5m0s  0039.87 iters/s
+
+running (0m04.0s), 0000/0165 VUs, 154 complete and 0 interrupted iterations
+book         [   1% ] 0000/0015 VUs  0m04.0s/5m0s  004.84 iters/s
+read_seats   [   1% ] 0000/0150 VUs  0m04.0s/5m0s  0044.94 iters/s
+
+running (0m05.0s), 0000/0165 VUs, 206 complete and 0 interrupted iterations
+book         [   2% ] 0000/0015 VUs  0m05.0s/5m0s  005.30 iters/s
+read_seats   [   2% ] 0000/0150 VUs  0m05.0s/5m0s  0049.90 iters/s
+
+running (0m06.0s), 0000/0165 VUs, 265 complete and 0 interrupted iterations
+book         [   2% ] 0000/0015 VUs  0m06.0s/5m0s  005.81 iters/s
+read_seats   [   2% ] 0000/0150 VUs  0m06.0s/5m0s  0054.95 iters/s
+
+running (0m07.0s), 0000/0165 VUs, 328 complete and 0 interrupted iterations
+book         [   2% ] 0000/0015 VUs  0m07.0s/5m0s  006.27 iters/s
+read_seats   [   2% ] 0000/0150 VUs  0m07.0s/5m0s  0059.92 iters/s
+
+running (0m08.0s), 0000/0165 VUs, 397 complete and 0 interrupted iterations
+book         [   3% ] 0000/0015 VUs  0m08.0s/5m0s  006.70 iters/s
+read_seats   [   3% ] 0000/0150 VUs  0m08.0s/5m0s  0064.96 iters/s
+
+running (0m09.0s), 0000/0165 VUs, 471 complete and 0 interrupted iterations
+book         [   3% ] 0000/0015 VUs  0m09.0s/5m0s  007.17 iters/s
+read_seats   [   3% ] 0000/0150 VUs  0m09.0s/5m0s  0069.93 iters/s
+
+running (0m10.0s), 0001/0165 VUs, 551 complete and 0 interrupted iterations
+book         [   3% ] 0000/0015 VUs  0m10.0s/5m0s  007.68 iters/s
+read_seats   [   3% ] 0001/0150 VUs  0m10.0s/5m0s  0074.97 iters/s
+
+running (0m11.0s), 0000/0165 VUs, 637 complete and 0 interrupted iterations
+book         [   4% ] 0000/0015 VUs  0m11.0s/5m0s  008.15 iters/s
+read_seats   [   4% ] 0000/0150 VUs  0m11.0s/5m0s  0079.94 iters/s
+
+running (0m12.0s), 0000/0165 VUs, 727 complete and 0 interrupted iterations
+book         [   4% ] 0000/0015 VUs  0m12.0s/5m0s  008.59 iters/s
+read_seats   [   4% ] 0000/0150 VUs  0m12.0s/5m0s  0084.91 iters/s
+
+running (0m13.0s), 0000/0165 VUs, 824 complete and 0 interrupted iterations
+book         [   4% ] 0000/0015 VUs  0m13.0s/5m0s  009.07 iters/s
+read_seats   [   4% ] 0000/0150 VUs  0m13.0s/5m0s  0089.94 iters/s
+
+running (0m14.0s), 0000/0165 VUs, 925 complete and 0 interrupted iterations
+book         [   5% ] 0000/0015 VUs  0m14.0s/5m0s  009.52 iters/s
+read_seats   [   5% ] 0000/0150 VUs  0m14.0s/5m0s  0094.92 iters/s
+
+running (0m15.0s), 0000/0165 VUs, 1033 complete and 0 interrupted iterations
+book         [   5% ] 0000/0015 VUs  0m15.0s/5m0s  009.99 iters/s
+read_seats   [   5% ] 0000/0150 VUs  0m15.0s/5m0s  0099.95 iters/s
+
+running (0m16.0s), 0000/0165 VUs, 1143 complete and 0 interrupted iterations
+book         [   5% ] 0000/0015 VUs  0m16.0s/5m0s  010.00 iters/s
+read_seats   [   5% ] 0000/0150 VUs  0m16.0s/5m0s  0100.00 iters/s
+
+running (0m17.0s), 0000/0165 VUs, 1253 complete and 0 interrupted iterations
+book         [   6% ] 0000/0015 VUs  0m17.0s/5m0s  010.00 iters/s
+read_seats   [   6% ] 0000/0150 VUs  0m17.0s/5m0s  0100.00 iters/s
+
+running (0m18.0s), 0000/0165 VUs, 1363 complete and 0 interrupted iterations
+book         [   6% ] 0000/0015 VUs  0m18.0s/5m0s  010.00 iters/s
+read_seats   [   6% ] 0000/0150 VUs  0m18.0s/5m0s  0100.00 iters/s
+
+running (0m19.0s), 0000/0165 VUs, 1473 complete and 0 interrupted iterations
+book         [   6% ] 0000/0015 VUs  0m19.0s/5m0s  010.00 iters/s
+read_seats   [   6% ] 0000/0150 VUs  0m19.0s/5m0s  0100.00 iters/s
+
+running (0m20.0s), 0000/0165 VUs, 1583 complete and 0 interrupted iterations
+book         [   7% ] 0000/0015 VUs  0m20.0s/5m0s  010.00 iters/s
+read_seats   [   7% ] 0000/0150 VUs  0m20.0s/5m0s  0100.00 iters/s
+
+running (0m21.0s), 0000/0165 VUs, 1693 complete and 0 interrupted iterations
+book         [   7% ] 0000/0015 VUs  0m21.0s/5m0s  010.00 iters/s
+read_seats   [   7% ] 0000/0150 VUs  0m21.0s/5m0s  0100.00 iters/s
+
+running (0m22.0s), 0000/0165 VUs, 1803 complete and 0 interrupted iterations
+book         [   7% ] 0000/0015 VUs  0m22.0s/5m0s  010.00 iters/s
+read_seats   [   7% ] 0000/0150 VUs  0m22.0s/5m0s  0100.00 iters/s
+
+running (0m23.0s), 0000/0165 VUs, 1913 complete and 0 interrupted iterations
+book         [   8% ] 0000/0015 VUs  0m23.0s/5m0s  010.00 iters/s
+read_seats   [   8% ] 0000/0150 VUs  0m23.0s/5m0s  0100.00 iters/s
+
+running (0m24.0s), 0000/0165 VUs, 2023 complete and 0 interrupted iterations
+book         [   8% ] 0000/0015 VUs  0m24.0s/5m0s  010.00 iters/s
+read_seats   [   8% ] 0000/0150 VUs  0m24.0s/5m0s  0100.00 iters/s
+
+running (0m25.0s), 0000/0165 VUs, 2133 complete and 0 interrupted iterations
+book         [   8% ] 0000/0015 VUs  0m25.0s/5m0s  010.00 iters/s
+read_seats   [   8% ] 0000/0150 VUs  0m25.0s/5m0s  0100.00 iters/s
+
+running (0m26.0s), 0000/0165 VUs, 2243 complete and 0 interrupted iterations
+book         [   9% ] 0000/0015 VUs  0m26.0s/5m0s  010.00 iters/s
+read_seats   [   9% ] 0000/0150 VUs  0m26.0s/5m0s  0100.00 iters/s
+
+running (0m27.0s), 0000/0165 VUs, 2353 complete and 0 interrupted iterations
+book         [   9% ] 0000/0015 VUs  0m27.0s/5m0s  010.00 iters/s
+read_seats   [   9% ] 0000/0150 VUs  0m27.0s/5m0s  0100.00 iters/s
+
+running (0m28.0s), 0000/0165 VUs, 2463 complete and 0 interrupted iterations
+book         [   9% ] 0000/0015 VUs  0m28.0s/5m0s  010.00 iters/s
+read_seats   [   9% ] 0000/0150 VUs  0m28.0s/5m0s  0100.00 iters/s
+
+running (0m29.0s), 0000/0165 VUs, 2573 complete and 0 interrupted iterations
+book         [  10% ] 0000/0015 VUs  0m29.0s/5m0s  010.00 iters/s
+read_seats   [  10% ] 0000/0150 VUs  0m29.0s/5m0s  0100.00 iters/s
+
+running (0m30.0s), 0000/0165 VUs, 2683 complete and 0 interrupted iterations
+book         [  10% ] 0000/0015 VUs  0m30.0s/5m0s  010.00 iters/s
+read_seats   [  10% ] 0000/0150 VUs  0m30.0s/5m0s  0100.00 iters/s
+
+running (0m31.0s), 0000/0165 VUs, 2793 complete and 0 interrupted iterations
+book         [  10% ] 0000/0015 VUs  0m31.0s/5m0s  010.00 iters/s
+read_seats   [  10% ] 0000/0150 VUs  0m31.0s/5m0s  0100.00 iters/s
+
+running (0m32.0s), 0000/0165 VUs, 2903 complete and 0 interrupted iterations
+book         [  11% ] 0000/0015 VUs  0m32.0s/5m0s  010.00 iters/s
+read_seats   [  11% ] 0000/0150 VUs  0m32.0s/5m0s  0100.00 iters/s
+
+running (0m33.0s), 0000/0165 VUs, 3013 complete and 0 interrupted iterations
+book         [  11% ] 0000/0015 VUs  0m33.0s/5m0s  010.00 iters/s
+read_seats   [  11% ] 0000/0150 VUs  0m33.0s/5m0s  0100.00 iters/s
+
+running (0m34.0s), 0000/0165 VUs, 3123 complete and 0 interrupted iterations
+book         [  11% ] 0000/0015 VUs  0m34.0s/5m0s  010.00 iters/s
+read_seats   [  11% ] 0000/0150 VUs  0m34.0s/5m0s  0100.00 iters/s
+
+running (0m35.0s), 0000/0165 VUs, 3233 complete and 0 interrupted iterations
+book         [  12% ] 0000/0015 VUs  0m35.0s/5m0s  010.00 iters/s
+read_seats   [  12% ] 0000/0150 VUs  0m35.0s/5m0s  0100.00 iters/s
+
+running (0m36.0s), 0000/0165 VUs, 3343 complete and 0 interrupted iterations
+book         [  12% ] 0000/0015 VUs  0m36.0s/5m0s  010.00 iters/s
+read_seats   [  12% ] 0000/0150 VUs  0m36.0s/5m0s  0100.00 iters/s
+
+running (0m37.0s), 0000/0165 VUs, 3453 complete and 0 interrupted iterations
+book         [  12% ] 0000/0015 VUs  0m37.0s/5m0s  010.00 iters/s
+read_seats   [  12% ] 0000/0150 VUs  0m37.0s/5m0s  0100.00 iters/s
+
+running (0m38.0s), 0000/0165 VUs, 3563 complete and 0 interrupted iterations
+book         [  13% ] 0000/0015 VUs  0m38.0s/5m0s  010.00 iters/s
+read_seats   [  13% ] 0000/0150 VUs  0m38.0s/5m0s  0100.00 iters/s
+
+running (0m39.0s), 0000/0165 VUs, 3673 complete and 0 interrupted iterations
+book         [  13% ] 0000/0015 VUs  0m39.0s/5m0s  010.00 iters/s
+read_seats   [  13% ] 0000/0150 VUs  0m39.0s/5m0s  0100.00 iters/s
+
+running (0m40.0s), 0000/0165 VUs, 3783 complete and 0 interrupted iterations
+book         [  13% ] 0000/0015 VUs  0m40.0s/5m0s  010.00 iters/s
+read_seats   [  13% ] 0000/0150 VUs  0m40.0s/5m0s  0100.00 iters/s
+
+running (0m41.0s), 0000/0165 VUs, 3893 complete and 0 interrupted iterations
+book         [  14% ] 0000/0015 VUs  0m41.0s/5m0s  010.00 iters/s
+read_seats   [  14% ] 0000/0150 VUs  0m41.0s/5m0s  0100.00 iters/s
+
+running (0m42.0s), 0000/0165 VUs, 4003 complete and 0 interrupted iterations
+book         [  14% ] 0000/0015 VUs  0m42.0s/5m0s  010.00 iters/s
+read_seats   [  14% ] 0000/0150 VUs  0m42.0s/5m0s  0100.00 iters/s
+
+running (0m43.0s), 0000/0165 VUs, 4113 complete and 0 interrupted iterations
+book         [  14% ] 0000/0015 VUs  0m43.0s/5m0s  010.00 iters/s
+read_seats   [  14% ] 0000/0150 VUs  0m43.0s/5m0s  0100.00 iters/s
+
+running (0m44.0s), 0000/0165 VUs, 4223 complete and 0 interrupted iterations
+book         [  15% ] 0000/0015 VUs  0m44.0s/5m0s  010.00 iters/s
+read_seats   [  15% ] 0000/0150 VUs  0m44.0s/5m0s  0100.00 iters/s
+
+running (0m45.0s), 0000/0165 VUs, 4333 complete and 0 interrupted iterations
+book         [  15% ] 0000/0015 VUs  0m45.0s/5m0s  010.00 iters/s
+read_seats   [  15% ] 0000/0150 VUs  0m45.0s/5m0s  0100.00 iters/s
+
+running (0m46.0s), 0000/0165 VUs, 4443 complete and 0 interrupted iterations
+book         [  15% ] 0000/0015 VUs  0m46.0s/5m0s  010.00 iters/s
+read_seats   [  15% ] 0000/0150 VUs  0m46.0s/5m0s  0100.00 iters/s
+
+running (0m47.0s), 0000/0165 VUs, 4553 complete and 0 interrupted iterations
+book         [  16% ] 0000/0015 VUs  0m47.0s/5m0s  010.00 iters/s
+read_seats   [  16% ] 0000/0150 VUs  0m47.0s/5m0s  0100.00 iters/s
+
+running (0m48.0s), 0000/0165 VUs, 4663 complete and 0 interrupted iterations
+book         [  16% ] 0000/0015 VUs  0m48.0s/5m0s  010.00 iters/s
+read_seats   [  16% ] 0000/0150 VUs  0m48.0s/5m0s  0100.00 iters/s
+
+running (0m49.0s), 0000/0165 VUs, 4773 complete and 0 interrupted iterations
+book         [  16% ] 0000/0015 VUs  0m49.0s/5m0s  010.00 iters/s
+read_seats   [  16% ] 0000/0150 VUs  0m49.0s/5m0s  0100.00 iters/s
+
+running (0m50.0s), 0000/0165 VUs, 4883 complete and 0 interrupted iterations
+book         [  17% ] 0000/0015 VUs  0m50.0s/5m0s  010.00 iters/s
+read_seats   [  17% ] 0000/0150 VUs  0m50.0s/5m0s  0100.00 iters/s
+
+running (0m51.0s), 0000/0165 VUs, 4993 complete and 0 interrupted iterations
+book         [  17% ] 0000/0015 VUs  0m51.0s/5m0s  010.00 iters/s
+read_seats   [  17% ] 0000/0150 VUs  0m51.0s/5m0s  0100.00 iters/s
+
+running (0m52.0s), 0000/0165 VUs, 5103 complete and 0 interrupted iterations
+book         [  17% ] 0000/0015 VUs  0m52.0s/5m0s  010.00 iters/s
+read_seats   [  17% ] 0000/0150 VUs  0m52.0s/5m0s  0100.00 iters/s
+
+running (0m53.0s), 0000/0165 VUs, 5213 complete and 0 interrupted iterations
+book         [  18% ] 0000/0015 VUs  0m53.0s/5m0s  010.00 iters/s
+read_seats   [  18% ] 0000/0150 VUs  0m53.0s/5m0s  0100.00 iters/s
+
+running (0m54.0s), 0000/0165 VUs, 5323 complete and 0 interrupted iterations
+book         [  18% ] 0000/0015 VUs  0m54.0s/5m0s  010.00 iters/s
+read_seats   [  18% ] 0000/0150 VUs  0m54.0s/5m0s  0100.00 iters/s
+
+running (0m55.0s), 0000/0165 VUs, 5433 complete and 0 interrupted iterations
+book         [  18% ] 0000/0015 VUs  0m55.0s/5m0s  010.00 iters/s
+read_seats   [  18% ] 0000/0150 VUs  0m55.0s/5m0s  0100.00 iters/s
+
+running (0m56.0s), 0000/0165 VUs, 5543 complete and 0 interrupted iterations
+book         [  19% ] 0000/0015 VUs  0m56.0s/5m0s  010.00 iters/s
+read_seats   [  19% ] 0000/0150 VUs  0m56.0s/5m0s  0100.00 iters/s
+
+running (0m57.0s), 0000/0165 VUs, 5653 complete and 0 interrupted iterations
+book         [  19% ] 0000/0015 VUs  0m57.0s/5m0s  010.00 iters/s
+read_seats   [  19% ] 0000/0150 VUs  0m57.0s/5m0s  0100.00 iters/s
+
+running (0m58.0s), 0000/0165 VUs, 5763 complete and 0 interrupted iterations
+book         [  19% ] 0000/0015 VUs  0m58.0s/5m0s  010.00 iters/s
+read_seats   [  19% ] 0000/0150 VUs  0m58.0s/5m0s  0100.00 iters/s
+
+running (0m59.0s), 0000/0165 VUs, 5873 complete and 0 interrupted iterations
+book         [  20% ] 0000/0015 VUs  0m59.0s/5m0s  010.00 iters/s
+read_seats   [  20% ] 0000/0150 VUs  0m59.0s/5m0s  0100.00 iters/s
+
+running (1m00.0s), 0000/0165 VUs, 5983 complete and 0 interrupted iterations
+book         [  20% ] 0000/0015 VUs  1m00.0s/5m0s  010.03 iters/s
+read_seats   [  20% ] 0000/0150 VUs  1m00.0s/5m0s  0100.00 iters/s
+
+running (1m01.0s), 0000/0165 VUs, 6107 complete and 0 interrupted iterations
+book         [  20% ] 0000/0015 VUs  1m01.0s/5m0s  012.60 iters/s
+read_seats   [  20% ] 0000/0150 VUs  1m01.0s/5m0s  0126.39 iters/s
+
+running (1m02.0s), 0000/0165 VUs, 6260 complete and 0 interrupted iterations
+book         [  21% ] 0000/0015 VUs  1m02.0s/5m0s  015.28 iters/s
+read_seats   [  21% ] 0000/0150 VUs  1m02.0s/5m0s  0152.93 iters/s
+
+running (1m03.0s), 0001/0165 VUs, 6443 complete and 0 interrupted iterations
+book         [  21% ] 0000/0015 VUs  1m03.0s/5m0s  018.00 iters/s
+read_seats   [  21% ] 0001/0150 VUs  1m03.0s/5m0s  0179.70 iters/s
+
+running (1m04.0s), 0000/0165 VUs, 6656 complete and 0 interrupted iterations
+book         [  21% ] 0000/0015 VUs  1m04.0s/5m0s  020.62 iters/s
+read_seats   [  21% ] 0000/0150 VUs  1m04.0s/5m0s  0206.37 iters/s
+
+running (1m05.0s), 0001/0165 VUs, 6897 complete and 0 interrupted iterations
+book         [  22% ] 0000/0015 VUs  1m05.0s/5m0s  023.30 iters/s
+read_seats   [  22% ] 0001/0150 VUs  1m05.0s/5m0s  0233.07 iters/s
+
+running (1m06.0s), 0001/0165 VUs, 7168 complete and 0 interrupted iterations
+book         [  22% ] 0000/0015 VUs  1m06.0s/5m0s  026.00 iters/s
+read_seats   [  22% ] 0001/0150 VUs  1m06.0s/5m0s  0259.69 iters/s
+
+running (1m07.0s), 0001/0165 VUs, 7468 complete and 0 interrupted iterations
+book         [  22% ] 0000/0015 VUs  1m07.0s/5m0s  028.64 iters/s
+read_seats   [  22% ] 0001/0150 VUs  1m07.0s/5m0s  0286.36 iters/s
+
+running (1m08.0s), 0001/0165 VUs, 7798 complete and 0 interrupted iterations
+book         [  23% ] 0000/0015 VUs  1m08.0s/5m0s  031.30 iters/s
+read_seats   [  23% ] 0001/0150 VUs  1m08.0s/5m0s  0313.05 iters/s
+
+running (1m09.0s), 0001/0165 VUs, 8157 complete and 0 interrupted iterations
+book         [  23% ] 0000/0015 VUs  1m09.0s/5m0s  034.00 iters/s
+read_seats   [  23% ] 0001/0150 VUs  1m09.0s/5m0s  0339.69 iters/s
+
+running (1m10.0s), 0001/0165 VUs, 8545 complete and 0 interrupted iterations
+book         [  23% ] 0000/0015 VUs  1m10.0s/5m0s  036.64 iters/s
+read_seats   [  23% ] 0001/0150 VUs  1m10.0s/5m0s  0366.35 iters/s
+
+running (1m11.0s), 0001/0165 VUs, 8963 complete and 0 interrupted iterations
+book         [  24% ] 0000/0015 VUs  1m11.0s/5m0s  039.31 iters/s
+read_seats   [  24% ] 0001/0150 VUs  1m11.0s/5m0s  0393.04 iters/s
+
+running (1m12.0s), 0001/0165 VUs, 9409 complete and 0 interrupted iterations
+book         [  24% ] 0001/0015 VUs  1m12.0s/5m0s  042.00 iters/s
+read_seats   [  24% ] 0001/0150 VUs  1m12.0s/5m0s  0419.68 iters/s
+
+running (1m13.0s), 0001/0165 VUs, 9886 complete and 0 interrupted iterations
+book         [  24% ] 0000/0015 VUs  1m13.0s/5m0s  044.65 iters/s
+read_seats   [  24% ] 0001/0150 VUs  1m13.0s/5m0s  0446.35 iters/s
+
+running (1m14.0s), 0001/0165 VUs, 10392 complete and 0 interrupted iterations
+book         [  25% ] 0000/0015 VUs  1m14.0s/5m0s  047.31 iters/s
+read_seats   [  25% ] 0001/0150 VUs  1m14.0s/5m0s  0473.03 iters/s
+
+running (1m15.0s), 0001/0165 VUs, 10926 complete and 0 interrupted iterations
+book         [  25% ] 0000/0015 VUs  1m15.0s/5m0s  049.95 iters/s
+read_seats   [  25% ] 0001/0150 VUs  1m15.0s/5m0s  0499.68 iters/s
+
+running (1m16.0s), 0000/0165 VUs, 11476 complete and 0 interrupted iterations
+book         [  25% ] 0000/0015 VUs  1m16.0s/5m0s  050.00 iters/s
+read_seats   [  25% ] 0001/0150 VUs  1m16.0s/5m0s  0500.00 iters/s
+
+running (1m17.0s), 0000/0165 VUs, 12026 complete and 0 interrupted iterations
+book         [  26% ] 0000/0015 VUs  1m17.0s/5m0s  050.00 iters/s
+read_seats   [  26% ] 0001/0150 VUs  1m17.0s/5m0s  0500.00 iters/s
+
+running (1m18.0s), 0001/0165 VUs, 12576 complete and 0 interrupted iterations
+book         [  26% ] 0000/0015 VUs  1m18.0s/5m0s  050.00 iters/s
+read_seats   [  26% ] 0001/0150 VUs  1m18.0s/5m0s  0500.00 iters/s
+
+running (1m19.0s), 0001/0165 VUs, 13126 complete and 0 interrupted iterations
+book         [  26% ] 0000/0015 VUs  1m19.0s/5m0s  050.00 iters/s
+read_seats   [  26% ] 0001/0150 VUs  1m19.0s/5m0s  0500.00 iters/s
+
+running (1m20.0s), 0001/0165 VUs, 13676 complete and 0 interrupted iterations
+book         [  27% ] 0000/0015 VUs  1m20.0s/5m0s  050.00 iters/s
+read_seats   [  27% ] 0001/0150 VUs  1m20.0s/5m0s  0500.00 iters/s
+
+running (1m21.0s), 0001/0165 VUs, 14226 complete and 0 interrupted iterations
+book         [  27% ] 0000/0015 VUs  1m21.0s/5m0s  050.00 iters/s
+read_seats   [  27% ] 0001/0150 VUs  1m21.0s/5m0s  0500.00 iters/s
+
+running (1m22.0s), 0001/0165 VUs, 14776 complete and 0 interrupted iterations
+book         [  27% ] 0000/0015 VUs  1m22.0s/5m0s  050.00 iters/s
+read_seats   [  27% ] 0001/0150 VUs  1m22.0s/5m0s  0500.00 iters/s
+
+running (1m23.0s), 0001/0165 VUs, 15326 complete and 0 interrupted iterations
+book         [  28% ] 0000/0015 VUs  1m23.0s/5m0s  050.00 iters/s
+read_seats   [  28% ] 0001/0150 VUs  1m23.0s/5m0s  0500.00 iters/s
+
+running (1m24.0s), 0001/0165 VUs, 15876 complete and 0 interrupted iterations
+book         [  28% ] 0000/0015 VUs  1m24.0s/5m0s  050.00 iters/s
+read_seats   [  28% ] 0001/0150 VUs  1m24.0s/5m0s  0500.00 iters/s
+
+running (1m25.0s), 0000/0165 VUs, 16427 complete and 0 interrupted iterations
+book         [  28% ] 0000/0015 VUs  1m25.0s/5m0s  050.00 iters/s
+read_seats   [  28% ] 0000/0150 VUs  1m25.0s/5m0s  0500.00 iters/s
+
+running (1m26.0s), 0001/0165 VUs, 16976 complete and 0 interrupted iterations
+book         [  29% ] 0000/0015 VUs  1m26.0s/5m0s  050.00 iters/s
+read_seats   [  29% ] 0001/0150 VUs  1m26.0s/5m0s  0500.00 iters/s
+
+running (1m27.0s), 0001/0165 VUs, 17526 complete and 0 interrupted iterations
+book         [  29% ] 0000/0015 VUs  1m27.0s/5m0s  050.00 iters/s
+read_seats   [  29% ] 0001/0150 VUs  1m27.0s/5m0s  0500.00 iters/s
+
+running (1m28.0s), 0001/0165 VUs, 18076 complete and 0 interrupted iterations
+book         [  29% ] 0000/0015 VUs  1m28.0s/5m0s  050.00 iters/s
+read_seats   [  29% ] 0001/0150 VUs  1m28.0s/5m0s  0500.00 iters/s
+
+running (1m29.0s), 0001/0165 VUs, 18626 complete and 0 interrupted iterations
+book         [  30% ] 0000/0015 VUs  1m29.0s/5m0s  050.00 iters/s
+read_seats   [  30% ] 0001/0150 VUs  1m29.0s/5m0s  0500.00 iters/s
+
+running (1m30.0s), 0001/0165 VUs, 19176 complete and 0 interrupted iterations
+book         [  30% ] 0000/0015 VUs  1m30.0s/5m0s  050.00 iters/s
+read_seats   [  30% ] 0001/0150 VUs  1m30.0s/5m0s  0500.00 iters/s
+
+running (1m31.0s), 0000/0165 VUs, 19726 complete and 0 interrupted iterations
+book         [  30% ] 0000/0015 VUs  1m31.0s/5m0s  050.00 iters/s
+read_seats   [  30% ] 0000/0150 VUs  1m31.0s/5m0s  0500.00 iters/s
+
+running (1m32.0s), 0001/0165 VUs, 20276 complete and 0 interrupted iterations
+book         [  31% ] 0000/0015 VUs  1m32.0s/5m0s  050.00 iters/s
+read_seats   [  31% ] 0001/0150 VUs  1m32.0s/5m0s  0500.00 iters/s
+
+running (1m33.0s), 0001/0165 VUs, 20826 complete and 0 interrupted iterations
+book         [  31% ] 0000/0015 VUs  1m33.0s/5m0s  050.00 iters/s
+read_seats   [  31% ] 0001/0150 VUs  1m33.0s/5m0s  0500.00 iters/s
+
+running (1m34.0s), 0001/0165 VUs, 21376 complete and 0 interrupted iterations
+book         [  31% ] 0000/0015 VUs  1m34.0s/5m0s  050.00 iters/s
+read_seats   [  31% ] 0001/0150 VUs  1m34.0s/5m0s  0500.00 iters/s
+
+running (1m35.0s), 0001/0165 VUs, 21926 complete and 0 interrupted iterations
+book         [  32% ] 0000/0015 VUs  1m35.0s/5m0s  050.00 iters/s
+read_seats   [  32% ] 0001/0150 VUs  1m35.0s/5m0s  0500.00 iters/s
+
+running (1m36.0s), 0001/0165 VUs, 22476 complete and 0 interrupted iterations
+book         [  32% ] 0000/0015 VUs  1m36.0s/5m0s  050.00 iters/s
+read_seats   [  32% ] 0001/0150 VUs  1m36.0s/5m0s  0500.00 iters/s
+
+running (1m37.0s), 0001/0165 VUs, 23026 complete and 0 interrupted iterations
+book         [  32% ] 0000/0015 VUs  1m37.0s/5m0s  050.00 iters/s
+read_seats   [  32% ] 0001/0150 VUs  1m37.0s/5m0s  0500.00 iters/s
+
+running (1m38.0s), 0000/0165 VUs, 23576 complete and 0 interrupted iterations
+book         [  33% ] 0000/0015 VUs  1m38.0s/5m0s  050.00 iters/s
+read_seats   [  33% ] 0001/0150 VUs  1m38.0s/5m0s  0500.00 iters/s
+
+running (1m39.0s), 0001/0165 VUs, 24126 complete and 0 interrupted iterations
+book         [  33% ] 0000/0015 VUs  1m39.0s/5m0s  050.00 iters/s
+read_seats   [  33% ] 0001/0150 VUs  1m39.0s/5m0s  0500.00 iters/s
+
+running (1m40.0s), 0001/0165 VUs, 24676 complete and 0 interrupted iterations
+book         [  33% ] 0000/0015 VUs  1m40.0s/5m0s  050.00 iters/s
+read_seats   [  33% ] 0001/0150 VUs  1m40.0s/5m0s  0500.00 iters/s
+
+running (1m41.0s), 0001/0165 VUs, 25226 complete and 0 interrupted iterations
+book         [  34% ] 0000/0015 VUs  1m41.0s/5m0s  050.00 iters/s
+read_seats   [  34% ] 0001/0150 VUs  1m41.0s/5m0s  0500.00 iters/s
+
+running (1m41.2s), 0001/0165 VUs, 25323 complete and 0 interrupted iterations
+book         [  34% ] 0000/0015 VUs  1m41.2s/5m0s  050.00 iters/s
+read_seats   [  34% ] 0001/0150 VUs  1m41.2s/5m0s  0500.00 iters/s
+
+running (1m42.0s), 0001/0165 VUs, 25776 complete and 0 interrupted iterations
+book         [  34% ] 0000/0015 VUs  1m42.0s/5m0s  050.00 iters/s
+read_seats   [  34% ] 0001/0150 VUs  1m42.0s/5m0s  0500.00 iters/s
+
+running (1m43.0s), 0001/0165 VUs, 26326 complete and 0 interrupted iterations
+book         [  34% ] 0000/0015 VUs  1m43.0s/5m0s  050.00 iters/s
+read_seats   [  34% ] 0001/0150 VUs  1m43.0s/5m0s  0500.00 iters/s
+
+running (1m44.0s), 0001/0165 VUs, 26876 complete and 0 interrupted iterations
+book         [  35% ] 0000/0015 VUs  1m44.0s/5m0s  050.00 iters/s
+read_seats   [  35% ] 0001/0150 VUs  1m44.0s/5m0s  0500.00 iters/s
+
+running (1m44.4s), 0001/0165 VUs, 27091 complete and 0 interrupted iterations
+book         [  35% ] 0000/0015 VUs  1m44.4s/5m0s  050.00 iters/s
+read_seats   [  35% ] 0001/0150 VUs  1m44.4s/5m0s  0500.00 iters/s
+
+running (1m45.0s), 0001/0165 VUs, 27426 complete and 0 interrupted iterations
+book         [  35% ] 0000/0015 VUs  1m45.0s/5m0s  050.00 iters/s
+read_seats   [  35% ] 0001/0150 VUs  1m45.0s/5m0s  0500.00 iters/s
+
+running (1m46.0s), 0001/0165 VUs, 27976 complete and 0 interrupted iterations
+book         [  35% ] 0000/0015 VUs  1m46.0s/5m0s  050.00 iters/s
+read_seats   [  35% ] 0001/0150 VUs  1m46.0s/5m0s  0500.00 iters/s
+
+running (1m47.0s), 0001/0165 VUs, 28526 complete and 0 interrupted iterations
+book         [  36% ] 0000/0015 VUs  1m47.0s/5m0s  050.00 iters/s
+read_seats   [  36% ] 0001/0150 VUs  1m47.0s/5m0s  0500.00 iters/s
+
+running (1m48.0s), 0001/0165 VUs, 29076 complete and 0 interrupted iterations
+book         [  36% ] 0000/0015 VUs  1m48.0s/5m0s  050.00 iters/s
+read_seats   [  36% ] 0001/0150 VUs  1m48.0s/5m0s  0500.00 iters/s
+
+running (1m49.0s), 0001/0165 VUs, 29626 complete and 0 interrupted iterations
+book         [  36% ] 0000/0015 VUs  1m49.0s/5m0s  050.00 iters/s
+read_seats   [  36% ] 0001/0150 VUs  1m49.0s/5m0s  0500.00 iters/s
+
+running (1m50.0s), 0001/0165 VUs, 30176 complete and 0 interrupted iterations
+book         [  37% ] 0000/0015 VUs  1m50.0s/5m0s  050.00 iters/s
+read_seats   [  37% ] 0001/0150 VUs  1m50.0s/5m0s  0500.00 iters/s
+
+running (1m51.0s), 0001/0165 VUs, 30726 complete and 0 interrupted iterations
+book         [  37% ] 0000/0015 VUs  1m51.0s/5m0s  050.00 iters/s
+read_seats   [  37% ] 0001/0150 VUs  1m51.0s/5m0s  0500.00 iters/s
+
+running (1m52.0s), 0002/0165 VUs, 31275 complete and 0 interrupted iterations
+book         [  37% ] 0000/0015 VUs  1m52.0s/5m0s  050.00 iters/s
+read_seats   [  37% ] 0002/0150 VUs  1m52.0s/5m0s  0500.00 iters/s
+
+running (1m53.0s), 0001/0165 VUs, 31826 complete and 0 interrupted iterations
+book         [  38% ] 0000/0015 VUs  1m53.0s/5m0s  050.00 iters/s
+read_seats   [  38% ] 0001/0150 VUs  1m53.0s/5m0s  0500.00 iters/s
+
+running (1m54.0s), 0001/0165 VUs, 32376 complete and 0 interrupted iterations
+book         [  38% ] 0000/0015 VUs  1m54.0s/5m0s  050.00 iters/s
+read_seats   [  38% ] 0001/0150 VUs  1m54.0s/5m0s  0500.00 iters/s
+
+running (1m55.0s), 0001/0165 VUs, 32926 complete and 0 interrupted iterations
+book         [  38% ] 0000/0015 VUs  1m55.0s/5m0s  050.00 iters/s
+read_seats   [  38% ] 0001/0150 VUs  1m55.0s/5m0s  0500.00 iters/s
+
+running (1m56.0s), 0001/0165 VUs, 33476 complete and 0 interrupted iterations
+book         [  39% ] 0000/0015 VUs  1m56.0s/5m0s  050.00 iters/s
+read_seats   [  39% ] 0001/0150 VUs  1m56.0s/5m0s  0500.00 iters/s
+
+running (1m57.0s), 0001/0165 VUs, 34026 complete and 0 interrupted iterations
+book         [  39% ] 0000/0015 VUs  1m57.0s/5m0s  050.00 iters/s
+read_seats   [  39% ] 0001/0150 VUs  1m57.0s/5m0s  0500.00 iters/s
+
+running (1m58.0s), 0001/0165 VUs, 34576 complete and 0 interrupted iterations
+book         [  39% ] 0000/0015 VUs  1m58.0s/5m0s  050.00 iters/s
+read_seats   [  39% ] 0001/0150 VUs  1m58.0s/5m0s  0500.00 iters/s
+
+running (1m59.0s), 0001/0165 VUs, 35126 complete and 0 interrupted iterations
+book         [  40% ] 0000/0015 VUs  1m59.0s/5m0s  050.00 iters/s
+read_seats   [  40% ] 0001/0150 VUs  1m59.0s/5m0s  0500.00 iters/s
+
+running (2m00.0s), 0001/0165 VUs, 35676 complete and 0 interrupted iterations
+book         [  40% ] 0000/0015 VUs  2m00.0s/5m0s  050.00 iters/s
+read_seats   [  40% ] 0001/0150 VUs  2m00.0s/5m0s  0500.00 iters/s
+
+running (2m01.0s), 0001/0165 VUs, 36244 complete and 0 interrupted iterations
+book         [  40% ] 0000/0015 VUs  2m01.0s/5m0s  053.29 iters/s
+read_seats   [  40% ] 0001/0150 VUs  2m01.0s/5m0s  0532.92 iters/s
+
+running (2m02.0s), 0001/0165 VUs, 36849 complete and 0 interrupted iterations
+book         [  41% ] 0000/0015 VUs  2m02.0s/5m0s  056.63 iters/s
+read_seats   [  41% ] 0001/0150 VUs  2m02.0s/5m0s  0566.27 iters/s
+
+running (2m03.0s), 0001/0165 VUs, 37489 complete and 0 interrupted iterations
+book         [  41% ] 0000/0015 VUs  2m03.0s/5m0s  059.94 iters/s
+read_seats   [  41% ] 0002/0150 VUs  2m03.0s/5m0s  0599.61 iters/s
+
+running (2m04.0s), 0001/0165 VUs, 38167 complete and 0 interrupted iterations
+book         [  41% ] 0000/0015 VUs  2m04.0s/5m0s  063.30 iters/s
+read_seats   [  41% ] 0002/0150 VUs  2m04.0s/5m0s  0632.93 iters/s
+
+running (2m05.0s), 0001/0165 VUs, 38883 complete and 0 interrupted iterations
+book         [  42% ] 0000/0015 VUs  2m05.0s/5m0s  066.63 iters/s
+read_seats   [  42% ] 0001/0150 VUs  2m05.0s/5m0s  0666.28 iters/s
+
+running (2m06.0s), 0001/0165 VUs, 39633 complete and 0 interrupted iterations
+book         [  42% ] 0000/0015 VUs  2m06.0s/5m0s  069.95 iters/s
+read_seats   [  42% ] 0001/0150 VUs  2m06.0s/5m0s  0699.57 iters/s
+
+running (2m07.0s), 0002/0165 VUs, 40421 complete and 0 interrupted iterations
+book         [  42% ] 0000/0015 VUs  2m07.0s/5m0s  073.30 iters/s
+read_seats   [  42% ] 0002/0150 VUs  2m07.0s/5m0s  0732.94 iters/s
+
+running (2m08.0s), 0002/0165 VUs, 41246 complete and 0 interrupted iterations
+book         [  43% ] 0000/0015 VUs  2m08.0s/5m0s  076.64 iters/s
+read_seats   [  43% ] 0002/0150 VUs  2m08.0s/5m0s  0766.29 iters/s
+
+running (2m09.0s), 0001/0165 VUs, 42107 complete and 0 interrupted iterations
+book         [  43% ] 0000/0015 VUs  2m09.0s/5m0s  079.96 iters/s
+read_seats   [  43% ] 0001/0150 VUs  2m09.0s/5m0s  0799.58 iters/s
+
+running (2m10.0s), 0002/0165 VUs, 43005 complete and 0 interrupted iterations
+book         [  43% ] 0000/0015 VUs  2m10.0s/5m0s  083.31 iters/s
+read_seats   [  43% ] 0002/0150 VUs  2m10.0s/5m0s  0832.95 iters/s
+
+running (2m11.0s), 0001/0165 VUs, 43940 complete and 0 interrupted iterations
+book         [  44% ] 0000/0015 VUs  2m11.0s/5m0s  086.64 iters/s
+read_seats   [  44% ] 0002/0150 VUs  2m11.0s/5m0s  0866.30 iters/s
+
+running (2m12.0s), 0001/0165 VUs, 44911 complete and 0 interrupted iterations
+book         [  44% ] 0000/0015 VUs  2m12.0s/5m0s  089.96 iters/s
+read_seats   [  44% ] 0002/0150 VUs  2m12.0s/5m0s  0899.63 iters/s
+
+running (2m13.0s), 0003/0165 VUs, 45918 complete and 0 interrupted iterations
+book         [  44% ] 0001/0015 VUs  2m13.0s/5m0s  093.31 iters/s
+read_seats   [  44% ] 0002/0150 VUs  2m13.0s/5m0s  0932.95 iters/s
+
+running (2m14.0s), 0002/0165 VUs, 46962 complete and 0 interrupted iterations
+book         [  45% ] 0001/0015 VUs  2m14.0s/5m0s  096.64 iters/s
+read_seats   [  45% ] 0002/0150 VUs  2m14.0s/5m0s  0966.26 iters/s
+
+running (2m15.0s), 0003/0165 VUs, 48044 complete and 0 interrupted iterations
+book         [  45% ] 0000/0015 VUs  2m15.0s/5m0s  099.97 iters/s
+read_seats   [  45% ] 0003/0150 VUs  2m15.0s/5m0s  0999.63 iters/s
+
+running (2m16.0s), 0001/0165 VUs, 49144 complete and 0 interrupted iterations
+book         [  45% ] 0000/0015 VUs  2m16.0s/5m0s  100.00 iters/s
+read_seats   [  45% ] 0002/0150 VUs  2m16.0s/5m0s  1000.00 iters/s
+
+running (2m17.0s), 0001/0165 VUs, 50244 complete and 0 interrupted iterations
+book         [  46% ] 0000/0015 VUs  2m17.0s/5m0s  100.00 iters/s
+read_seats   [  46% ] 0002/0150 VUs  2m17.0s/5m0s  1000.00 iters/s
+
+running (2m18.0s), 0002/0165 VUs, 51343 complete and 0 interrupted iterations
+book         [  46% ] 0000/0015 VUs  2m18.0s/5m0s  100.00 iters/s
+read_seats   [  46% ] 0003/0150 VUs  2m18.0s/5m0s  1000.00 iters/s
+
+running (2m19.0s), 0002/0165 VUs, 52444 complete and 0 interrupted iterations
+book         [  46% ] 0000/0015 VUs  2m19.0s/5m0s  100.00 iters/s
+read_seats   [  46% ] 0002/0150 VUs  2m19.0s/5m0s  1000.00 iters/s
+
+running (2m20.0s), 0002/0165 VUs, 53543 complete and 0 interrupted iterations
+book         [  47% ] 0000/0015 VUs  2m20.0s/5m0s  100.00 iters/s
+read_seats   [  47% ] 0003/0150 VUs  2m20.0s/5m0s  1000.00 iters/s
+
+running (2m21.0s), 0002/0165 VUs, 54643 complete and 0 interrupted iterations
+book         [  47% ] 0000/0015 VUs  2m21.0s/5m0s  100.00 iters/s
+read_seats   [  47% ] 0003/0150 VUs  2m21.0s/5m0s  1000.00 iters/s
+
+running (2m22.0s), 0002/0165 VUs, 55744 complete and 0 interrupted iterations
+book         [  47% ] 0000/0015 VUs  2m22.0s/5m0s  100.00 iters/s
+read_seats   [  47% ] 0002/0150 VUs  2m22.0s/5m0s  1000.00 iters/s
+
+running (2m23.0s), 0002/0165 VUs, 56843 complete and 0 interrupted iterations
+book         [  48% ] 0000/0015 VUs  2m23.0s/5m0s  100.00 iters/s
+read_seats   [  48% ] 0003/0150 VUs  2m23.0s/5m0s  1000.00 iters/s
+
+running (2m24.0s), 0002/0165 VUs, 57944 complete and 0 interrupted iterations
+book         [  48% ] 0000/0015 VUs  2m24.0s/5m0s  100.00 iters/s
+read_seats   [  48% ] 0002/0150 VUs  2m24.0s/5m0s  1000.00 iters/s
+
+running (2m25.0s), 0002/0165 VUs, 59044 complete and 0 interrupted iterations
+book         [  48% ] 0000/0015 VUs  2m25.0s/5m0s  100.00 iters/s
+read_seats   [  48% ] 0002/0150 VUs  2m25.0s/5m0s  1000.00 iters/s
+
+running (2m26.0s), 0002/0165 VUs, 60144 complete and 0 interrupted iterations
+book         [  49% ] 0000/0015 VUs  2m26.0s/5m0s  100.00 iters/s
+read_seats   [  49% ] 0002/0150 VUs  2m26.0s/5m0s  1000.00 iters/s
+
+running (2m27.0s), 0001/0165 VUs, 61244 complete and 0 interrupted iterations
+book         [  49% ] 0000/0015 VUs  2m27.0s/5m0s  100.00 iters/s
+read_seats   [  49% ] 0002/0150 VUs  2m27.0s/5m0s  1000.00 iters/s
+
+running (2m28.0s), 0002/0165 VUs, 62343 complete and 0 interrupted iterations
+book         [  49% ] 0000/0015 VUs  2m28.0s/5m0s  100.00 iters/s
+read_seats   [  49% ] 0003/0150 VUs  2m28.0s/5m0s  1000.00 iters/s
+
+running (2m29.0s), 0002/0165 VUs, 63444 complete and 0 interrupted iterations
+book         [  50% ] 0000/0015 VUs  2m29.0s/5m0s  100.00 iters/s
+read_seats   [  50% ] 0002/0150 VUs  2m29.0s/5m0s  1000.00 iters/s
+
+running (2m30.0s), 0002/0165 VUs, 64544 complete and 0 interrupted iterations
+book         [  50% ] 0000/0015 VUs  2m30.0s/5m0s  100.00 iters/s
+read_seats   [  50% ] 0002/0150 VUs  2m30.0s/5m0s  1000.00 iters/s
+
+running (2m31.0s), 0002/0165 VUs, 65644 complete and 0 interrupted iterations
+book         [  50% ] 0000/0015 VUs  2m31.0s/5m0s  100.00 iters/s
+read_seats   [  50% ] 0002/0150 VUs  2m31.0s/5m0s  1000.00 iters/s
+
+running (2m32.0s), 0002/0165 VUs, 66744 complete and 0 interrupted iterations
+book         [  51% ] 0000/0015 VUs  2m32.0s/5m0s  100.00 iters/s
+read_seats   [  51% ] 0002/0150 VUs  2m32.0s/5m0s  1000.00 iters/s
+
+running (2m33.0s), 0003/0165 VUs, 67843 complete and 0 interrupted iterations
+book         [  51% ] 0000/0015 VUs  2m33.0s/5m0s  100.00 iters/s
+read_seats   [  51% ] 0003/0150 VUs  2m33.0s/5m0s  1000.00 iters/s
+
+running (2m34.0s), 0002/0165 VUs, 68944 complete and 0 interrupted iterations
+book         [  51% ] 0000/0015 VUs  2m34.0s/5m0s  100.00 iters/s
+read_seats   [  51% ] 0002/0150 VUs  2m34.0s/5m0s  1000.00 iters/s
+
+running (2m35.0s), 0002/0165 VUs, 70044 complete and 0 interrupted iterations
+book         [  52% ] 0000/0015 VUs  2m35.0s/5m0s  100.00 iters/s
+read_seats   [  52% ] 0002/0150 VUs  2m35.0s/5m0s  1000.00 iters/s
+
+running (2m36.0s), 0002/0165 VUs, 71143 complete and 0 interrupted iterations
+book         [  52% ] 0000/0015 VUs  2m36.0s/5m0s  100.00 iters/s
+read_seats   [  52% ] 0003/0150 VUs  2m36.0s/5m0s  1000.00 iters/s
+
+running (2m37.0s), 0003/0165 VUs, 72243 complete and 0 interrupted iterations
+book         [  52% ] 0000/0015 VUs  2m37.0s/5m0s  100.00 iters/s
+read_seats   [  52% ] 0003/0150 VUs  2m37.0s/5m0s  1000.00 iters/s
+
+running (2m38.0s), 0002/0165 VUs, 73344 complete and 0 interrupted iterations
+book         [  53% ] 0000/0015 VUs  2m38.0s/5m0s  100.00 iters/s
+read_seats   [  53% ] 0002/0150 VUs  2m38.0s/5m0s  1000.00 iters/s
+
+running (2m39.0s), 0002/0165 VUs, 74443 complete and 0 interrupted iterations
+book         [  53% ] 0000/0015 VUs  2m39.0s/5m0s  100.00 iters/s
+read_seats   [  53% ] 0003/0150 VUs  2m39.0s/5m0s  1000.00 iters/s
+
+running (2m40.0s), 0003/0165 VUs, 75543 complete and 0 interrupted iterations
+book         [  53% ] 0000/0015 VUs  2m40.0s/5m0s  100.00 iters/s
+read_seats   [  53% ] 0003/0150 VUs  2m40.0s/5m0s  1000.00 iters/s
+
+running (2m41.0s), 0003/0165 VUs, 76643 complete and 0 interrupted iterations
+book         [  54% ] 0000/0015 VUs  2m41.0s/5m0s  100.00 iters/s
+read_seats   [  54% ] 0003/0150 VUs  2m41.0s/5m0s  1000.00 iters/s
+
+running (2m42.0s), 0002/0165 VUs, 77744 complete and 0 interrupted iterations
+book         [  54% ] 0000/0015 VUs  2m42.0s/5m0s  100.00 iters/s
+read_seats   [  54% ] 0002/0150 VUs  2m42.0s/5m0s  1000.00 iters/s
+
+running (2m43.0s), 0003/0165 VUs, 78843 complete and 0 interrupted iterations
+book         [  54% ] 0000/0015 VUs  2m43.0s/5m0s  100.00 iters/s
+read_seats   [  54% ] 0003/0150 VUs  2m43.0s/5m0s  1000.00 iters/s
+
+running (2m44.0s), 0003/0165 VUs, 79944 complete and 0 interrupted iterations
+book         [  55% ] 0000/0015 VUs  2m44.0s/5m0s  100.00 iters/s
+read_seats   [  55% ] 0003/0150 VUs  2m44.0s/5m0s  1000.00 iters/s
+
+running (2m45.0s), 0002/0165 VUs, 81044 complete and 0 interrupted iterations
+book         [  55% ] 0000/0015 VUs  2m45.0s/5m0s  100.00 iters/s
+read_seats   [  55% ] 0002/0150 VUs  2m45.0s/5m0s  1000.00 iters/s
+
+running (2m46.0s), 0003/0165 VUs, 82143 complete and 0 interrupted iterations
+book         [  55% ] 0000/0015 VUs  2m46.0s/5m0s  100.00 iters/s
+read_seats   [  55% ] 0003/0150 VUs  2m46.0s/5m0s  1000.00 iters/s
+
+running (2m47.0s), 0003/0165 VUs, 83243 complete and 0 interrupted iterations
+book         [  56% ] 0000/0015 VUs  2m47.0s/5m0s  100.00 iters/s
+read_seats   [  56% ] 0003/0150 VUs  2m47.0s/5m0s  1000.00 iters/s
+
+running (2m48.0s), 0002/0165 VUs, 84344 complete and 0 interrupted iterations
+book         [  56% ] 0000/0015 VUs  2m48.0s/5m0s  100.00 iters/s
+read_seats   [  56% ] 0002/0150 VUs  2m48.0s/5m0s  1000.00 iters/s
+
+running (2m49.0s), 0002/0165 VUs, 85444 complete and 0 interrupted iterations
+book         [  56% ] 0000/0015 VUs  2m49.0s/5m0s  100.00 iters/s
+read_seats   [  56% ] 0003/0150 VUs  2m49.0s/5m0s  1000.00 iters/s
+
+running (2m50.0s), 0001/0165 VUs, 86544 complete and 0 interrupted iterations
+book         [  57% ] 0000/0015 VUs  2m50.0s/5m0s  100.00 iters/s
+read_seats   [  57% ] 0003/0150 VUs  2m50.0s/5m0s  1000.00 iters/s
+
+running (2m51.0s), 0003/0165 VUs, 87643 complete and 0 interrupted iterations
+book         [  57% ] 0000/0015 VUs  2m51.0s/5m0s  100.00 iters/s
+read_seats   [  57% ] 0003/0150 VUs  2m51.0s/5m0s  1000.00 iters/s
+
+running (2m52.0s), 0002/0165 VUs, 88744 complete and 0 interrupted iterations
+book         [  57% ] 0000/0015 VUs  2m52.0s/5m0s  100.00 iters/s
+read_seats   [  57% ] 0002/0150 VUs  2m52.0s/5m0s  1000.00 iters/s
+
+running (2m53.0s), 0002/0165 VUs, 89844 complete and 0 interrupted iterations
+book         [  58% ] 0000/0015 VUs  2m53.0s/5m0s  100.00 iters/s
+read_seats   [  58% ] 0002/0150 VUs  2m53.0s/5m0s  1000.00 iters/s
+
+running (2m54.0s), 0002/0165 VUs, 90944 complete and 0 interrupted iterations
+book         [  58% ] 0000/0015 VUs  2m54.0s/5m0s  100.00 iters/s
+read_seats   [  58% ] 0002/0150 VUs  2m54.0s/5m0s  1000.00 iters/s
+
+running (2m55.0s), 0002/0165 VUs, 92044 complete and 0 interrupted iterations
+book         [  58% ] 0000/0015 VUs  2m55.0s/5m0s  100.00 iters/s
+read_seats   [  58% ] 0002/0150 VUs  2m55.0s/5m0s  1000.00 iters/s
+
+running (2m56.0s), 0003/0165 VUs, 93143 complete and 0 interrupted iterations
+book         [  59% ] 0000/0015 VUs  2m56.0s/5m0s  100.00 iters/s
+read_seats   [  59% ] 0003/0150 VUs  2m56.0s/5m0s  1000.00 iters/s
+
+running (2m57.0s), 0003/0165 VUs, 94243 complete and 0 interrupted iterations
+book         [  59% ] 0000/0015 VUs  2m57.0s/5m0s  100.00 iters/s
+read_seats   [  59% ] 0003/0150 VUs  2m57.0s/5m0s  1000.00 iters/s
+
+running (2m58.0s), 0002/0165 VUs, 95343 complete and 0 interrupted iterations
+book         [  59% ] 0000/0015 VUs  2m58.0s/5m0s  100.00 iters/s
+read_seats   [  59% ] 0003/0150 VUs  2m58.0s/5m0s  1000.00 iters/s
+
+running (2m59.0s), 0003/0165 VUs, 96443 complete and 0 interrupted iterations
+book         [  60% ] 0000/0015 VUs  2m59.0s/5m0s  100.00 iters/s
+read_seats   [  60% ] 0003/0150 VUs  2m59.0s/5m0s  1000.00 iters/s
+
+running (3m00.0s), 0003/0165 VUs, 97543 complete and 0 interrupted iterations
+book         [  60% ] 0000/0015 VUs  3m00.0s/5m0s  100.00 iters/s
+read_seats   [  60% ] 0003/0150 VUs  3m00.0s/5m0s  1000.00 iters/s
+
+running (3m01.0s), 0003/0165 VUs, 98679 complete and 0 interrupted iterations
+book         [  60% ] 0000/0015 VUs  3m01.0s/5m0s  106.58 iters/s
+read_seats   [  60% ] 0002/0150 VUs  3m01.0s/5m0s  1065.90 iters/s
+
+running (3m02.0s), 0003/0165 VUs, 99887 complete and 0 interrupted iterations
+book         [  61% ] 0000/0015 VUs  3m02.0s/5m0s  113.25 iters/s
+read_seats   [  61% ] 0003/0150 VUs  3m02.0s/5m0s  1132.55 iters/s
+
+running (3m03.0s), 0003/0165 VUs, 101169 complete and 0 interrupted iterations
+book         [  61% ] 0001/0015 VUs  3m03.0s/5m0s  119.94 iters/s
+read_seats   [  61% ] 0003/0150 VUs  3m03.0s/5m0s  1199.17 iters/s
+
+running (3m04.0s), 0004/0165 VUs, 102525 complete and 0 interrupted iterations
+book         [  61% ] 0000/0015 VUs  3m04.0s/5m0s  126.60 iters/s
+read_seats   [  61% ] 0004/0150 VUs  3m04.0s/5m0s  1265.86 iters/s
+
+running (3m05.0s), 0003/0165 VUs, 103955 complete and 0 interrupted iterations
+book         [  62% ] 0000/0015 VUs  3m05.0s/5m0s  133.27 iters/s
+read_seats   [  62% ] 0003/0150 VUs  3m05.0s/5m0s  1332.52 iters/s
+
+running (3m06.0s), 0003/0165 VUs, 105457 complete and 0 interrupted iterations
+book         [  62% ] 0000/0015 VUs  3m06.0s/5m0s  139.90 iters/s
+read_seats   [  62% ] 0002/0150 VUs  3m06.0s/5m0s  1399.19 iters/s
+
+running (3m07.0s), 0005/0165 VUs, 107032 complete and 0 interrupted iterations
+book         [  62% ] 0001/0015 VUs  3m07.0s/5m0s  146.61 iters/s
+read_seats   [  62% ] 0004/0150 VUs  3m07.0s/5m0s  1465.88 iters/s
+
+running (3m08.0s), 0004/0165 VUs, 108681 complete and 0 interrupted iterations
+book         [  63% ] 0001/0015 VUs  3m08.0s/5m0s  153.28 iters/s
+read_seats   [  63% ] 0003/0150 VUs  3m08.0s/5m0s  1532.49 iters/s
+
+running (3m09.0s), 0003/0165 VUs, 110403 complete and 0 interrupted iterations
+book         [  63% ] 0000/0015 VUs  3m09.0s/5m0s  159.92 iters/s
+read_seats   [  63% ] 0004/0150 VUs  3m09.0s/5m0s  1599.17 iters/s
+
+running (3m10.0s), 0004/0165 VUs, 112199 complete and 0 interrupted iterations
+book         [  63% ] 0001/0015 VUs  3m10.0s/5m0s  166.61 iters/s
+read_seats   [  63% ] 0004/0150 VUs  3m10.0s/5m0s  1665.85 iters/s
+
+running (3m11.0s), 0004/0165 VUs, 114068 complete and 0 interrupted iterations
+book         [  64% ] 0000/0015 VUs  3m11.0s/5m0s  173.24 iters/s
+read_seats   [  64% ] 0004/0150 VUs  3m11.0s/5m0s  1732.51 iters/s
+
+running (3m12.0s), 0004/0165 VUs, 116011 complete and 0 interrupted iterations
+book         [  64% ] 0000/0015 VUs  3m12.0s/5m0s  179.93 iters/s
+read_seats   [  64% ] 0004/0150 VUs  3m12.0s/5m0s  1799.19 iters/s
+
+running (3m13.0s), 0005/0165 VUs, 118025 complete and 0 interrupted iterations
+book         [  64% ] 0000/0015 VUs  3m13.0s/5m0s  186.58 iters/s
+read_seats   [  64% ] 0005/0150 VUs  3m13.0s/5m0s  1865.83 iters/s
+
+running (3m14.0s), 0006/0165 VUs, 120113 complete and 0 interrupted iterations
+book         [  65% ] 0000/0015 VUs  3m14.0s/5m0s  193.25 iters/s
+read_seats   [  65% ] 0006/0150 VUs  3m14.0s/5m0s  1932.49 iters/s
+
+running (3m15.0s), 0139/0253 VUs, 121966 complete and 0 interrupted iterations
+book         [  65% ] 0015/0030 VUs  3m15.0s/5m0s  199.93 iters/s
+read_seats   [  65% ] 0124/0223 VUs  3m15.0s/5m0s  1999.17 iters/s
+
+running (3m16.0s), 0007/0253 VUs, 124298 complete and 0 interrupted iterations
+book         [  65% ] 0001/0030 VUs  3m16.0s/5m0s  200.00 iters/s
+read_seats   [  65% ] 0007/0223 VUs  3m16.0s/5m0s  2000.00 iters/s
+
+running (3m17.0s), 0006/0253 VUs, 126499 complete and 0 interrupted iterations
+book         [  66% ] 0001/0030 VUs  3m17.0s/5m0s  200.00 iters/s
+read_seats   [  66% ] 0005/0223 VUs  3m17.0s/5m0s  2000.00 iters/s
+
+running (3m18.0s), 0006/0253 VUs, 128699 complete and 0 interrupted iterations
+book         [  66% ] 0001/0030 VUs  3m18.0s/5m0s  200.00 iters/s
+read_seats   [  66% ] 0005/0223 VUs  3m18.0s/5m0s  2000.00 iters/s
+
+running (3m19.0s), 0006/0253 VUs, 130899 complete and 0 interrupted iterations
+book         [  66% ] 0001/0030 VUs  3m19.0s/5m0s  200.00 iters/s
+read_seats   [  66% ] 0006/0223 VUs  3m19.0s/5m0s  2000.00 iters/s
+
+running (3m20.0s), 0005/0253 VUs, 133099 complete and 0 interrupted iterations
+book         [  67% ] 0001/0030 VUs  3m20.0s/5m0s  200.00 iters/s
+read_seats   [  67% ] 0005/0223 VUs  3m20.0s/5m0s  2000.00 iters/s
+
+running (3m21.0s), 0007/0253 VUs, 135299 complete and 0 interrupted iterations
+book         [  67% ] 0001/0030 VUs  3m21.0s/5m0s  200.00 iters/s
+read_seats   [  67% ] 0006/0223 VUs  3m21.0s/5m0s  2000.00 iters/s
+
+running (3m22.0s), 0008/0253 VUs, 137497 complete and 0 interrupted iterations
+book         [  67% ] 0001/0030 VUs  3m22.0s/5m0s  200.00 iters/s
+read_seats   [  67% ] 0007/0223 VUs  3m22.0s/5m0s  2000.00 iters/s
+
+running (3m23.0s), 0007/0253 VUs, 139698 complete and 0 interrupted iterations
+book         [  68% ] 0001/0030 VUs  3m23.0s/5m0s  200.00 iters/s
+read_seats   [  68% ] 0006/0223 VUs  3m23.0s/5m0s  2000.00 iters/s
+
+running (3m24.0s), 0019/0253 VUs, 141886 complete and 0 interrupted iterations
+book         [  68% ] 0003/0030 VUs  3m24.0s/5m0s  200.00 iters/s
+read_seats   [  68% ] 0016/0223 VUs  3m24.0s/5m0s  2000.00 iters/s
+
+running (3m25.0s), 0007/0253 VUs, 144097 complete and 0 interrupted iterations
+book         [  68% ] 0001/0030 VUs  3m25.0s/5m0s  200.00 iters/s
+read_seats   [  68% ] 0008/0223 VUs  3m25.0s/5m0s  2000.00 iters/s
+
+running (3m26.0s), 0081/0253 VUs, 146224 complete and 0 interrupted iterations
+book         [  69% ] 0006/0030 VUs  3m26.0s/5m0s  200.00 iters/s
+read_seats   [  69% ] 0075/0223 VUs  3m26.0s/5m0s  2000.00 iters/s
+
+running (3m27.0s), 0228/0264 VUs, 148260 complete and 0 interrupted iterations
+book         [  69% ] 0021/0030 VUs  3m27.0s/5m0s  200.00 iters/s
+read_seats   [  69% ] 0207/0234 VUs  3m27.0s/5m0s  2000.00 iters/s
+
+running (3m28.0s), 0069/0264 VUs, 150620 complete and 0 interrupted iterations
+book         [  69% ] 0006/0030 VUs  3m28.0s/5m0s  200.00 iters/s
+read_seats   [  69% ] 0063/0234 VUs  3m28.0s/5m0s  2000.00 iters/s
+
+running (3m29.0s), 0008/0264 VUs, 152879 complete and 0 interrupted iterations
+book         [  70% ] 0001/0030 VUs  3m29.0s/5m0s  200.00 iters/s
+read_seats   [  70% ] 0009/0234 VUs  3m29.0s/5m0s  2000.00 iters/s
+
+running (3m30.0s), 0020/0264 VUs, 155068 complete and 0 interrupted iterations
+book         [  70% ] 0002/0030 VUs  3m30.0s/5m0s  200.00 iters/s
+read_seats   [  70% ] 0018/0234 VUs  3m30.0s/5m0s  2000.00 iters/s
+
+running (3m31.0s), 0033/0264 VUs, 157256 complete and 0 interrupted iterations
+book         [  70% ] 0003/0030 VUs  3m31.0s/5m0s  200.00 iters/s
+read_seats   [  70% ] 0029/0234 VUs  3m31.0s/5m0s  2000.00 iters/s
+
+running (3m32.0s), 0008/0264 VUs, 159479 complete and 0 interrupted iterations
+book         [  71% ] 0001/0030 VUs  3m32.0s/5m0s  200.00 iters/s
+read_seats   [  71% ] 0007/0234 VUs  3m32.0s/5m0s  2000.00 iters/s
+
+running (3m33.0s), 0011/0264 VUs, 161677 complete and 0 interrupted iterations
+book         [  71% ] 0001/0030 VUs  3m33.0s/5m0s  200.00 iters/s
+read_seats   [  71% ] 0010/0234 VUs  3m33.0s/5m0s  2000.00 iters/s
+
+running (3m34.0s), 0012/0264 VUs, 163879 complete and 0 interrupted iterations
+book         [  71% ] 0001/0030 VUs  3m34.0s/5m0s  200.00 iters/s
+read_seats   [  71% ] 0011/0234 VUs  3m34.0s/5m0s  2000.00 iters/s
+
+running (3m35.0s), 0008/0264 VUs, 166080 complete and 0 interrupted iterations
+book         [  72% ] 0001/0030 VUs  3m35.0s/5m0s  200.00 iters/s
+read_seats   [  72% ] 0007/0234 VUs  3m35.0s/5m0s  2000.00 iters/s
+
+running (3m36.0s), 0008/0264 VUs, 168282 complete and 0 interrupted iterations
+book         [  72% ] 0000/0030 VUs  3m36.0s/5m0s  200.00 iters/s
+read_seats   [  72% ] 0008/0234 VUs  3m36.0s/5m0s  2000.00 iters/s
+
+running (3m37.0s), 0211/0264 VUs, 170278 complete and 0 interrupted iterations
+book         [  72% ] 0016/0030 VUs  3m37.0s/5m0s  200.00 iters/s
+read_seats   [  72% ] 0195/0234 VUs  3m37.0s/5m0s  2000.00 iters/s
+
+running (3m38.0s), 0360/0366 VUs, 172189 complete and 0 interrupted iterations
+book         [  73% ] 0032/0036 VUs  3m38.0s/5m0s  200.00 iters/s
+read_seats   [  73% ] 0328/0330 VUs  3m38.0s/5m0s  2000.00 iters/s
+
+running (3m39.0s), 0353/0376 VUs, 174383 complete and 0 interrupted iterations
+book         [  73% ] 0030/0037 VUs  3m39.0s/5m0s  200.00 iters/s
+read_seats   [  73% ] 0323/0339 VUs  3m39.0s/5m0s  2000.00 iters/s
+
+running (3m40.0s), 0486/0489 VUs, 176248 complete and 0 interrupted iterations
+book         [  73% ] 0050/0052 VUs  3m40.0s/5m0s  200.00 iters/s
+read_seats   [  73% ] 0436/0437 VUs  3m40.0s/5m0s  2000.00 iters/s
+
+running (3m41.0s), 0453/0522 VUs, 178425 complete and 0 interrupted iterations
+book         [  74% ] 0041/0056 VUs  3m41.0s/5m0s  200.00 iters/s
+read_seats   [  74% ] 0412/0466 VUs  3m41.0s/5m0s  2000.00 iters/s
+
+running (3m42.0s), 0356/0522 VUs, 180721 complete and 0 interrupted iterations
+book         [  74% ] 0036/0056 VUs  3m42.0s/5m0s  200.00 iters/s
+read_seats   [  74% ] 0320/0466 VUs  3m42.0s/5m0s  2000.00 iters/s
+
+running (3m43.0s), 0269/0522 VUs, 183008 complete and 0 interrupted iterations
+book         [  74% ] 0023/0056 VUs  3m43.0s/5m0s  200.00 iters/s
+read_seats   [  74% ] 0246/0466 VUs  3m43.0s/5m0s  2000.00 iters/s
+
+running (3m44.0s), 0138/0522 VUs, 185340 complete and 0 interrupted iterations
+book         [  75% ] 0015/0056 VUs  3m44.0s/5m0s  200.00 iters/s
+read_seats   [  75% ] 0123/0466 VUs  3m44.0s/5m0s  2000.00 iters/s
+
+running (3m45.0s), 0033/0522 VUs, 187645 complete and 0 interrupted iterations
+book         [  75% ] 0004/0056 VUs  3m45.0s/5m0s  200.00 iters/s
+read_seats   [  75% ] 0029/0466 VUs  3m45.0s/5m0s  2000.00 iters/s
+
+running (3m46.0s), 0046/0522 VUs, 189832 complete and 0 interrupted iterations
+book         [  75% ] 0006/0056 VUs  3m46.0s/5m0s  200.00 iters/s
+read_seats   [  75% ] 0040/0466 VUs  3m46.0s/5m0s  2000.00 iters/s
+
+running (3m47.0s), 0084/0522 VUs, 191994 complete and 0 interrupted iterations
+book         [  76% ] 0008/0056 VUs  3m47.0s/5m0s  200.00 iters/s
+read_seats   [  76% ] 0076/0466 VUs  3m47.0s/5m0s  2000.00 iters/s
+
+running (3m48.0s), 0199/0522 VUs, 194079 complete and 0 interrupted iterations
+book         [  76% ] 0022/0056 VUs  3m48.0s/5m0s  200.00 iters/s
+read_seats   [  76% ] 0177/0466 VUs  3m48.0s/5m0s  2000.00 iters/s
+
+running (3m49.0s), 0427/0522 VUs, 196050 complete and 0 interrupted iterations
+book         [  76% ] 0040/0056 VUs  3m49.0s/5m0s  200.00 iters/s
+read_seats   [  76% ] 0387/0466 VUs  3m49.0s/5m0s  2000.00 iters/s
+
+running (3m50.0s), 0604/0611 VUs, 197946 complete and 0 interrupted iterations
+book         [  77% ] 0057/0061 VUs  3m50.0s/5m0s  200.00 iters/s
+read_seats   [  77% ] 0547/0550 VUs  3m50.0s/5m0s  2000.00 iters/s
+
+running (3m51.0s), 0604/0621 VUs, 200128 complete and 0 interrupted iterations
+book         [  77% ] 0055/0063 VUs  3m51.0s/5m0s  200.00 iters/s
+read_seats   [  77% ] 0550/0558 VUs  3m51.0s/5m0s  2000.00 iters/s
+
+running (3m52.0s), 0626/0637 VUs, 202286 complete and 0 interrupted iterations
+book         [  77% ] 0055/0066 VUs  3m52.0s/5m0s  200.00 iters/s
+read_seats   [  77% ] 0571/0571 VUs  3m52.0s/5m0s  2000.00 iters/s
+
+running (3m53.0s), 0701/0703 VUs, 204300 complete and 0 interrupted iterations
+book         [  78% ] 0071/0071 VUs  3m53.0s/5m0s  200.00 iters/s
+read_seats   [  78% ] 0630/0632 VUs  3m53.0s/5m0s  2000.00 iters/s
+
+running (3m54.0s), 0770/0773 VUs, 206327 complete and 0 interrupted iterations
+book         [  78% ] 0074/0075 VUs  3m54.0s/5m0s  200.00 iters/s
+read_seats   [  78% ] 0696/0698 VUs  3m54.0s/5m0s  2000.00 iters/s
+
+running (3m55.0s), 0868/0869 VUs, 208271 complete and 0 interrupted iterations
+book         [  78% ] 0084/0084 VUs  3m55.0s/5m0s  200.00 iters/s
+read_seats   [  78% ] 0784/0785 VUs  3m55.0s/5m0s  2000.00 iters/s
+
+running (3m56.0s), 0971/0975 VUs, 210206 complete and 0 interrupted iterations
+book         [  79% ] 0094/0096 VUs  3m56.0s/5m0s  200.00 iters/s
+read_seats   [  79% ] 0877/0879 VUs  3m56.0s/5m0s  2000.00 iters/s
+
+running (3m57.0s), 1031/1038 VUs, 212258 complete and 0 interrupted iterations
+book         [  79% ] 0096/0100 VUs  3m57.0s/5m0s  200.00 iters/s
+read_seats   [  79% ] 0935/0938 VUs  3m57.0s/5m0s  2000.00 iters/s
+
+running (3m58.0s), 1106/1109 VUs, 214273 complete and 0 interrupted iterations
+book         [  79% ] 0104/0107 VUs  3m58.0s/5m0s  200.00 iters/s
+read_seats   [  79% ] 1002/1002 VUs  3m58.0s/5m0s  2000.00 iters/s
+
+running (3m59.0s), 1157/1164 VUs, 216355 complete and 0 interrupted iterations
+book         [  80% ] 0111/0114 VUs  3m59.0s/5m0s  200.00 iters/s
+read_seats   [  80% ] 1046/1050 VUs  3m59.0s/5m0s  2000.00 iters/s
+
+running (4m00.0s), 1215/1227 VUs, 218415 complete and 0 interrupted iterations
+book         [  80% ] 0109/0118 VUs  4m00.0s/5m0s  200.00 iters/s
+read_seats   [  80% ] 1107/1109 VUs  4m00.0s/5m0s  2000.00 iters/s
+
+running (4m01.0s), 1446/1452 VUs, 220129 complete and 0 interrupted iterations
+book         [  80% ] 0134/0139 VUs  4m01.0s/5m0s  213.17 iters/s
+read_seats   [  80% ] 1312/1313 VUs  4m01.0s/5m0s  2131.67 iters/s
+time="2026-10-28T21:56:26+01:00" level=warning msg="Insufficient VUs, reached 1500 active VUs and cannot initialize more" executor=ramping-arrival-rate scenario=read_seats
+
+running (4m02.0s), 1657/1659 VUs, 222033 complete and 0 interrupted iterations
+book         [  81% ] 0157/0159 VUs  4m02.0s/5m0s  226.51 iters/s
+read_seats   [  81% ] 1500/1500 VUs  4m02.0s/5m0s  2265.16 iters/s
+
+running (4m03.0s), 1677/1680 VUs, 224008 complete and 0 interrupted iterations
+book         [  81% ] 0178/0180 VUs  4m03.0s/5m0s  239.83 iters/s
+read_seats   [  81% ] 1499/1500 VUs  4m03.0s/5m0s  2398.39 iters/s
+
+running (4m04.0s), 1700/1701 VUs, 225959 complete and 0 interrupted iterations
+book         [  81% ] 0200/0201 VUs  4m04.0s/5m0s  253.19 iters/s
+read_seats   [  81% ] 1500/1500 VUs  4m04.0s/5m0s  2531.72 iters/s
+
+running (4m05.0s), 1729/1738 VUs, 227618 complete and 0 interrupted iterations
+book         [  82% ] 0229/0238 VUs  4m05.0s/5m0s  266.53 iters/s
+read_seats   [  82% ] 1500/1500 VUs  4m05.0s/5m0s  2665.03 iters/s
+
+running (4m06.0s), 1726/1743 VUs, 229617 complete and 0 interrupted iterations
+book         [  82% ] 0228/0243 VUs  4m06.0s/5m0s  279.86 iters/s
+read_seats   [  82% ] 1498/1500 VUs  4m06.0s/5m0s  2798.33 iters/s
+
+running (4m07.0s), 1738/1747 VUs, 231651 complete and 0 interrupted iterations
+book         [  82% ] 0238/0247 VUs  4m07.0s/5m0s  293.17 iters/s
+read_seats   [  82% ] 1500/1500 VUs  4m07.0s/5m0s  2931.62 iters/s
+
+running (4m08.0s), 1755/1756 VUs, 233654 complete and 0 interrupted iterations
+book         [  83% ] 0256/0256 VUs  4m08.0s/5m0s  306.51 iters/s
+read_seats   [  83% ] 1499/1500 VUs  4m08.0s/5m0s  3064.98 iters/s
+
+running (4m09.0s), 1761/1768 VUs, 235670 complete and 0 interrupted iterations
+book         [  83% ] 0261/0268 VUs  4m09.0s/5m0s  319.83 iters/s
+read_seats   [  83% ] 1500/1500 VUs  4m09.0s/5m0s  3198.38 iters/s
+
+running (4m10.0s), 1772/1781 VUs, 237682 complete and 0 interrupted iterations
+book         [  83% ] 0274/0281 VUs  4m10.0s/5m0s  333.19 iters/s
+read_seats   [  83% ] 1498/1500 VUs  4m10.0s/5m0s  3331.87 iters/s
+
+running (4m11.0s), 1796/1798 VUs, 239636 complete and 0 interrupted iterations
+book         [  84% ] 0296/0298 VUs  4m11.0s/5m0s  346.53 iters/s
+read_seats   [  84% ] 1500/1500 VUs  4m11.0s/5m0s  3465.06 iters/s
+
+running (4m12.0s), 1824/1825 VUs, 241428 complete and 0 interrupted iterations
+book         [  84% ] 0324/0325 VUs  4m12.0s/5m0s  359.85 iters/s
+read_seats   [  84% ] 1500/1500 VUs  4m12.0s/5m0s  3598.44 iters/s
+
+running (4m13.0s), 1833/1855 VUs, 243255 complete and 0 interrupted iterations
+book         [  84% ] 0334/0355 VUs  4m13.0s/5m0s  373.17 iters/s
+read_seats   [  84% ] 1499/1500 VUs  4m13.0s/5m0s  3731.71 iters/s
+
+running (4m14.0s), 1837/1857 VUs, 245241 complete and 0 interrupted iterations
+book         [  85% ] 0338/0357 VUs  4m14.0s/5m0s  386.51 iters/s
+read_seats   [  85% ] 1499/1500 VUs  4m14.0s/5m0s  3865.14 iters/s
+
+running (4m15.0s), 1860/1865 VUs, 247193 complete and 0 interrupted iterations
+book         [  85% ] 0361/0365 VUs  4m15.0s/5m0s  399.87 iters/s
+read_seats   [  85% ] 1499/1500 VUs  4m15.0s/5m0s  3998.40 iters/s
+
+running (4m16.0s), 1880/1880 VUs, 249099 complete and 0 interrupted iterations
+book         [  85% ] 0380/0380 VUs  4m16.0s/5m0s  400.00 iters/s
+read_seats   [  85% ] 1500/1500 VUs  4m16.0s/5m0s  4000.00 iters/s
+
+running (4m17.0s), 1888/1895 VUs, 250987 complete and 0 interrupted iterations
+book         [  86% ] 0390/0395 VUs  4m17.0s/5m0s  400.00 iters/s
+read_seats   [  86% ] 1498/1500 VUs  4m17.0s/5m0s  4000.00 iters/s
+
+running (4m18.0s), 1890/1900 VUs, 252880 complete and 0 interrupted iterations
+book         [  86% ] 0391/0400 VUs  4m18.0s/5m0s  400.00 iters/s
+read_seats   [  86% ] 1499/1500 VUs  4m18.0s/5m0s  4000.00 iters/s
+
+running (4m19.0s), 1919/1929 VUs, 254566 complete and 0 interrupted iterations
+book         [  86% ] 0420/0429 VUs  4m19.0s/5m0s  400.00 iters/s
+read_seats   [  86% ] 1499/1500 VUs  4m19.0s/5m0s  4000.00 iters/s
+
+running (4m20.0s), 1939/1943 VUs, 256269 complete and 0 interrupted iterations
+book         [  87% ] 0439/0443 VUs  4m20.0s/5m0s  400.00 iters/s
+read_seats   [  87% ] 1500/1500 VUs  4m20.0s/5m0s  4000.00 iters/s
+
+running (4m21.0s), 1954/1962 VUs, 257878 complete and 0 interrupted iterations
+book         [  87% ] 0454/0462 VUs  4m21.0s/5m0s  400.00 iters/s
+read_seats   [  87% ] 1499/1500 VUs  4m21.0s/5m0s  4000.00 iters/s
+
+running (4m22.0s), 1950/1966 VUs, 259575 complete and 0 interrupted iterations
+book         [  87% ] 0450/0466 VUs  4m22.0s/5m0s  400.00 iters/s
+read_seats   [  87% ] 1500/1500 VUs  4m22.0s/5m0s  4000.00 iters/s
+
+running (4m23.0s), 1963/1966 VUs, 261242 complete and 0 interrupted iterations
+book         [  88% ] 0464/0466 VUs  4m23.0s/5m0s  400.00 iters/s
+read_seats   [  88% ] 1499/1500 VUs  4m23.0s/5m0s  4000.00 iters/s
+
+running (4m24.0s), 2003/2005 VUs, 262662 complete and 0 interrupted iterations
+book         [  88% ] 0504/0505 VUs  4m24.0s/5m0s  400.00 iters/s
+read_seats   [  88% ] 1499/1500 VUs  4m24.0s/5m0s  4000.00 iters/s
+
+running (4m25.0s), 1978/2007 VUs, 264337 complete and 0 interrupted iterations
+book         [  88% ] 0478/0507 VUs  4m25.0s/5m0s  400.00 iters/s
+read_seats   [  88% ] 1500/1500 VUs  4m25.0s/5m0s  4000.00 iters/s
+
+running (4m26.0s), 1991/2007 VUs, 265974 complete and 0 interrupted iterations
+book         [  89% ] 0491/0507 VUs  4m26.0s/5m0s  400.00 iters/s
+read_seats   [  89% ] 1500/1500 VUs  4m26.0s/5m0s  4000.00 iters/s
+
+running (4m27.0s), 1999/2008 VUs, 267548 complete and 0 interrupted iterations
+book         [  89% ] 0500/0508 VUs  4m27.0s/5m0s  400.00 iters/s
+read_seats   [  89% ] 1499/1500 VUs  4m27.0s/5m0s  4000.00 iters/s
+
+running (4m28.0s), 1988/2008 VUs, 269198 complete and 0 interrupted iterations
+book         [  89% ] 0488/0508 VUs  4m28.0s/5m0s  400.00 iters/s
+read_seats   [  89% ] 1500/1500 VUs  4m28.0s/5m0s  4000.00 iters/s
+
+running (4m29.0s), 1996/2008 VUs, 270773 complete and 0 interrupted iterations
+book         [  90% ] 0496/0508 VUs  4m29.0s/5m0s  400.00 iters/s
+read_seats   [  90% ] 1500/1500 VUs  4m29.0s/5m0s  4000.00 iters/s
+
+running (4m30.0s), 2000/2019 VUs, 272333 complete and 0 interrupted iterations
+book         [  90% ] 0501/0519 VUs  4m30.0s/5m0s  400.00 iters/s
+read_seats   [  90% ] 1499/1500 VUs  4m30.0s/5m0s  4000.00 iters/s
+
+running (4m31.0s), 2007/2019 VUs, 273882 complete and 0 interrupted iterations
+book         [  90% ] 0507/0519 VUs  4m31.0s/5m0s  400.00 iters/s
+read_seats   [  90% ] 1500/1500 VUs  4m31.0s/5m0s  4000.00 iters/s
+
+running (4m32.0s), 2019/2028 VUs, 275432 complete and 0 interrupted iterations
+book         [  91% ] 0519/0528 VUs  4m32.0s/5m0s  400.00 iters/s
+read_seats   [  91% ] 1500/1500 VUs  4m32.0s/5m0s  4000.00 iters/s
+
+running (4m33.0s), 2032/2035 VUs, 276918 complete and 0 interrupted iterations
+book         [  91% ] 0532/0535 VUs  4m33.0s/5m0s  400.00 iters/s
+read_seats   [  91% ] 1500/1500 VUs  4m33.0s/5m0s  4000.00 iters/s
+
+running (4m34.0s), 2026/2038 VUs, 278481 complete and 0 interrupted iterations
+book         [  91% ] 0526/0538 VUs  4m34.0s/5m0s  400.00 iters/s
+read_seats   [  91% ] 1500/1500 VUs  4m34.0s/5m0s  4000.00 iters/s
+
+running (4m35.0s), 2042/2046 VUs, 279914 complete and 0 interrupted iterations
+book         [  92% ] 0543/0546 VUs  4m35.0s/5m0s  400.00 iters/s
+read_seats   [  92% ] 1499/1500 VUs  4m35.0s/5m0s  4000.00 iters/s
+
+running (4m36.0s), 2048/2069 VUs, 281337 complete and 0 interrupted iterations
+book         [  92% ] 0548/0569 VUs  4m36.0s/5m0s  400.00 iters/s
+read_seats   [  92% ] 1500/1500 VUs  4m36.0s/5m0s  4000.00 iters/s
+
+running (4m37.0s), 2046/2069 VUs, 282806 complete and 0 interrupted iterations
+book         [  92% ] 0547/0569 VUs  4m37.0s/5m0s  400.00 iters/s
+read_seats   [  92% ] 1499/1500 VUs  4m37.0s/5m0s  4000.00 iters/s
+
+running (4m38.0s), 2045/2069 VUs, 284315 complete and 0 interrupted iterations
+book         [  93% ] 0545/0569 VUs  4m38.0s/5m0s  400.00 iters/s
+read_seats   [  93% ] 1500/1500 VUs  4m38.0s/5m0s  4000.00 iters/s
+
+running (4m39.0s), 2049/2069 VUs, 285838 complete and 0 interrupted iterations
+book         [  93% ] 0549/0569 VUs  4m39.0s/5m0s  400.00 iters/s
+read_seats   [  93% ] 1500/1500 VUs  4m39.0s/5m0s  4000.00 iters/s
+
+running (4m40.0s), 2028/2069 VUs, 287368 complete and 0 interrupted iterations
+book         [  93% ] 0529/0569 VUs  4m40.0s/5m0s  400.00 iters/s
+read_seats   [  93% ] 1499/1500 VUs  4m40.0s/5m0s  4000.00 iters/s
+
+running (4m41.0s), 2055/2069 VUs, 288805 complete and 0 interrupted iterations
+book         [  94% ] 0555/0569 VUs  4m41.0s/5m0s  400.00 iters/s
+read_seats   [  94% ] 1500/1500 VUs  4m41.0s/5m0s  4000.00 iters/s
+
+running (4m42.0s), 2077/2087 VUs, 290146 complete and 0 interrupted iterations
+book         [  94% ] 0577/0587 VUs  4m42.0s/5m0s  400.00 iters/s
+read_seats   [  94% ] 1500/1500 VUs  4m42.0s/5m0s  4000.00 iters/s
+
+running (4m43.0s), 2070/2095 VUs, 291574 complete and 0 interrupted iterations
+book         [  94% ] 0570/0595 VUs  4m43.0s/5m0s  400.00 iters/s
+read_seats   [  94% ] 1500/1500 VUs  4m43.0s/5m0s  4000.00 iters/s
+
+running (4m44.0s), 2063/2095 VUs, 293038 complete and 0 interrupted iterations
+book         [  95% ] 0563/0595 VUs  4m44.0s/5m0s  400.00 iters/s
+read_seats   [  95% ] 1500/1500 VUs  4m44.0s/5m0s  4000.00 iters/s
+
+running (4m45.0s), 2073/2095 VUs, 294471 complete and 0 interrupted iterations
+book         [  95% ] 0574/0595 VUs  4m45.0s/5m0s  400.00 iters/s
+read_seats   [  95% ] 1499/1500 VUs  4m45.0s/5m0s  4000.00 iters/s
+
+running (4m46.0s), 2072/2095 VUs, 295901 complete and 0 interrupted iterations
+book         [  95% ] 0572/0595 VUs  4m46.0s/5m0s  400.00 iters/s
+read_seats   [  95% ] 1500/1500 VUs  4m46.0s/5m0s  4000.00 iters/s
+
+running (4m47.0s), 2117/2119 VUs, 297120 complete and 0 interrupted iterations
+book         [  96% ] 0618/0619 VUs  4m47.0s/5m0s  400.00 iters/s
+read_seats   [  96% ] 1499/1500 VUs  4m47.0s/5m0s  4000.00 iters/s
+
+running (4m48.0s), 2088/2129 VUs, 298552 complete and 0 interrupted iterations
+book         [  96% ] 0588/0629 VUs  4m48.0s/5m0s  400.00 iters/s
+read_seats   [  96% ] 1500/1500 VUs  4m48.0s/5m0s  4000.00 iters/s
+
+running (4m49.0s), 2077/2129 VUs, 299983 complete and 0 interrupted iterations
+book         [  96% ] 0577/0629 VUs  4m49.0s/5m0s  400.00 iters/s
+read_seats   [  96% ] 1500/1500 VUs  4m49.0s/5m0s  4000.00 iters/s
+
+running (4m50.0s), 2094/2129 VUs, 301357 complete and 0 interrupted iterations
+book         [  97% ] 0595/0629 VUs  4m50.0s/5m0s  400.00 iters/s
+read_seats   [  97% ] 1499/1500 VUs  4m50.0s/5m0s  4000.00 iters/s
+
+running (4m51.0s), 2103/2129 VUs, 302754 complete and 0 interrupted iterations
+book         [  97% ] 0603/0629 VUs  4m51.0s/5m0s  400.00 iters/s
+read_seats   [  97% ] 1500/1500 VUs  4m51.0s/5m0s  4000.00 iters/s
+
+running (4m52.0s), 2113/2129 VUs, 304118 complete and 0 interrupted iterations
+book         [  97% ] 0613/0629 VUs  4m52.0s/5m0s  400.00 iters/s
+read_seats   [  97% ] 1500/1500 VUs  4m52.0s/5m0s  4000.00 iters/s
+
+running (4m53.0s), 2105/2129 VUs, 305509 complete and 0 interrupted iterations
+book         [  98% ] 0606/0629 VUs  4m53.0s/5m0s  400.00 iters/s
+read_seats   [  98% ] 1499/1500 VUs  4m53.0s/5m0s  4000.00 iters/s
+
+running (4m54.0s), 2126/2129 VUs, 306833 complete and 0 interrupted iterations
+book         [  98% ] 0627/0629 VUs  4m54.0s/5m0s  400.00 iters/s
+read_seats   [  98% ] 1499/1500 VUs  4m54.0s/5m0s  4000.00 iters/s
+
+running (4m55.0s), 2156/2156 VUs, 308009 complete and 0 interrupted iterations
+book         [  98% ] 0656/0656 VUs  4m55.0s/5m0s  400.00 iters/s
+read_seats   [  98% ] 1500/1500 VUs  4m55.0s/5m0s  4000.00 iters/s
+
+running (4m56.0s), 2174/2182 VUs, 309223 complete and 0 interrupted iterations
+book         [  99% ] 0675/0682 VUs  4m56.0s/5m0s  400.00 iters/s
+read_seats   [  99% ] 1499/1500 VUs  4m56.0s/5m0s  4000.00 iters/s
+
+running (4m57.0s), 2143/2182 VUs, 310604 complete and 0 interrupted iterations
+book         [  99% ] 0643/0682 VUs  4m57.0s/5m0s  400.00 iters/s
+read_seats   [  99% ] 1500/1500 VUs  4m57.0s/5m0s  4000.00 iters/s
+
+running (4m58.0s), 2176/2185 VUs, 311796 complete and 0 interrupted iterations
+book         [  99% ] 0678/0685 VUs  4m58.0s/5m0s  400.00 iters/s
+read_seats   [  99% ] 1498/1500 VUs  4m58.0s/5m0s  4000.00 iters/s
+
+running (4m59.0s), 2166/2196 VUs, 313124 complete and 0 interrupted iterations
+book         [ 100% ] 0667/0696 VUs  4m59.0s/5m0s  400.00 iters/s
+read_seats   [ 100% ] 1499/1500 VUs  4m59.0s/5m0s  4000.00 iters/s
+
+running (5m00.0s), 2136/2196 VUs, 314464 complete and 0 interrupted iterations
+book         [ 100% ] 0636/0696 VUs  5m00.0s/5m0s  400.00 iters/s
+read_seats   [ 100% ] 1500/1500 VUs  5m00.0s/5m0s  4000.00 iters/s
+
+running (5m01.0s), 0963/2196 VUs, 315650 complete and 0 interrupted iterations
+book       ↓ [ 100% ] 0638/0696 VUs  5m0s  400.00 iters/s
+read_seats ↓ [ 100% ] 1500/1500 VUs  5m0s  4000.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration{scenario:book}
+    ✗ 'p(95)<300' p(95)=1.67s
+
+    http_req_duration{scenario:read_seats}
+    ✗ 'p(95)<200' p(95)=1.49s
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 316613  1049.337349/s
+    checks_succeeded...: 100.00% 316613 out of 316613
+    checks_failed......: 0.00%   0 out of 316613
+
+    ✓ seats 200
+    ✓ booked 201
+
+    HTTP
+    http_req_duration..............: avg=419.66ms min=620.49µs med=6.5ms    max=2.56s p(90)=1.37s p(95)=1.53s
+      { expected_response:true }...: avg=419.66ms min=620.49µs med=6.5ms    max=2.56s p(90)=1.37s p(95)=1.53s
+      { scenario:book }............: avg=710.82ms min=858µs    med=825.08ms max=2.56s p(90)=1.56s p(95)=1.67s
+      { scenario:read_seats }......: avg=375.22ms min=620.49µs med=4.26ms   max=2.46s p(90)=1.32s p(95)=1.49s
+    http_req_failed................: 0.00%  0 out of 316613
+    http_reqs......................: 316613 1049.337349/s
+
+    EXECUTION
+    dropped_iterations.............: 152192 504.403641/s
+    iteration_duration.............: avg=419.72ms min=649.56µs med=6.57ms   max=2.56s p(90)=1.37s p(95)=1.53s
+    iterations.....................: 316613 1049.337349/s
+    vus............................: 962    min=0           max=2179
+    vus_max........................: 2196   min=165         max=2196
+
+    NETWORK
+    data_received..................: 3.4 GB 11 MB/s
+    data_sent......................: 30 MB  101 kB/s
+
+
+
+
+running (5m01.7s), 0000/2196 VUs, 316613 complete and 0 interrupted iterations
+book       ✓ [ 100% ] 0000/0696 VUs  5m0s  400.00 iters/s
+read_seats ✓ [ 100% ] 0000/1500 VUs  5m0s  4000.00 iters/s
+time="2026-10-28T21:57:26+01:00" level=error msg="thresholds on metrics 'http_req_duration{scenario:book}, http_req_duration{scenario:read_seats}' have been crossed"
