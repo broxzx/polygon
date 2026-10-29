@@ -9,6 +9,7 @@ import io.github.broxzx.bookinglab.booking.exceptions.NotFoundException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +18,7 @@ public class EventService {
   private final SeatRepository seatRepository;
   private final EventRepository eventRepository;
 
+  @Transactional(readOnly = true)
   public List<SeatDto> getSeatsByEventId(Integer eventId) {
     Event event =
         eventRepository

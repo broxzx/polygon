@@ -14,6 +14,7 @@ export const options = {
             startRate: 25, timeUnit: '1s',
             preAllocatedVUs: 150, maxVUs: 1500,
             stages: [
+                {target: 100, duration: '30s'}, // warm-up the service
                 {target: 2000, duration: '15s'}, {target: 2000, duration: '45s'},
                 {target: 4000, duration: '15s'}, {target: 4000, duration: '45s'},
                 {target: 6000, duration: '15s'}, {target: 6000, duration: '45s'},
@@ -27,6 +28,7 @@ export const options = {
             startRate: 3, timeUnit: '1s',
             preAllocatedVUs: 15, maxVUs: 1000,
             stages: [
+                {target: 10, duration: '30s'}, // warm-up the service
                 {target: 200, duration: '15s'}, {target: 200, duration: '45s'},
                 {target: 400, duration: '15s'}, {target: 400, duration: '45s'},
                 {target: 600, duration: '15s'}, {target: 600, duration: '45s'},
