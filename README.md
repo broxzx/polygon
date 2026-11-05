@@ -42,9 +42,15 @@ k6 run -e READ_EVENT_ID=1 -e FIRST_SEAT=1 load/bookings.js
 
 The test uses the open model (`ramping-arrival-rate`): k6 sends N requests per second whether the service keeps up or not, the way real traffic does. Reads ramp in steps up to 12,000 req/s, and bookings run at 10% of the read rate.
 
+For the 20M-row dataset there is a narrower profile: a 2-minute JIT warm-up, then 1,000 → 1,500 → 2,000 → 2,500 req/s with p95 reported per step. The script refreshes the list of free seats, resets `pg_stat_statements` and saves the output:
+
+```bash
+load/run-steps.sh <event_id> <name>
+```
+
 ## Findings
 
-All runs were on one laptop: k6, the app, Postgres and Docker share the same CPU. The absolute numbers are therefore lower than on separate machines, but the before/after comparisons are fair.
+In every run k6, the app, Postgres and Docker share one machine's CPU, so the absolute numbers are lower than on separate machines. Findings 1 and 2 ran on my desktop PC and finding 3 on a MacBook Air M3. Compare numbers within a finding, not across them.
 
 ### 1. The query planner thought the SSD was a spinning disk
 
@@ -86,7 +92,27 @@ On disk, `bookings` is 1.85 GB of heap plus 615 MB of indexes. The `seat_id` ind
 
 The first generator run produced only 10.7M rows. `least(event_date - x, now())` had clamped every future event's `created_at` to the same `now()`, which is constant inside a transaction, so those events got a zero-length booking window. A prediction of the total (~21M) is what caught it.
 
-**Next:** p95 of `GET /events/{id}/seats` on this volume. My written prediction before measuring is ~30 ms.
+#### What the volume costs
+
+I compared two events in the same database, with the same number of seats and the same JSON size. The hot event has ~43 bookings per seat and the cold one almost none, so the only difference is how many booking rows the `EXISTS` subplan reads. Both runs include bookings at 10% of the read rate, all answered `201`.
+
+| | Hot event | Cold event |
+|---|---|---|
+| p95 at 1,000 req/s | 46 ms | **1.7 ms** |
+| p95 at 1,500 req/s | 1.35 s | **48 ms** |
+| p95 at 2,000 req/s | 2.37 s | 1.16 s |
+| Peak read throughput | ~1,460 req/s | **~2,080 req/s** |
+| Mean SQL time | 3.42 ms | 0.74 ms |
+| Pages per query | 1,048 | 782 |
+
+- **One query is the whole problem.** In the hot run the seats query took ~97% of all database time.
+- **The limit is CPU, not the pool.** At the hot event's knee the machine's CPU was at ~100% and Hikari at 10/10. The pool alone would allow ~2,900 req/s (10 connections / 3.42 ms). CPU contention stretches each query, and that fills the pool, so the full pool is a symptom. Above the knee throughput collapses, from ~1,460 to ~900 req/s.
+- **My prediction was wrong.** I wrote down ~30 ms p95 at 2,000 req/s before measuring and got 2.37 s. My estimate covered the SQL only, and 2,000 req/s is above capacity, where queueing decides the latency.
+- **Cheaper SQL has a limit.** SQL became ~4.6× cheaper on the cold event, but the ceiling rose only ~1.4×. The rest of the CPU goes to Java, k6 and the bookings, so an index on the hot event should not be expected to go far beyond the cold event's ceiling on this machine.
+
+A dirty run is worth recording too. An earlier cold run peaked at ~2,400 req/s, but 99.4% of its bookings got `409` because a wrapper script had not refreshed the seat list. Without the inserts the service did less work, so I discarded it and reran.
+
+**Next:** `EXPLAIN (ANALYZE, BUFFERS)` for both events, to explain why even an event with no bookings reads ~4 pages per seat, then indexes with a before/after run.
 
 ## Roadmap
 
