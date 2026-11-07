@@ -1,0 +1,25 @@
+-- GET /events/{id}/seats checks each seat for an active booking:
+--   EXISTS (SELECT 1 FROM bookings WHERE seat_id = ? AND deleted = false AND state IN (?, ?))
+--
+-- Hot event (192 seats, ~43 booking rows per seat), 20.9M bookings,
+-- generic plan (plan_cache_mode = force_generic_plan).
+--
+-- Before: idx__bookings_seat_id_fk reads the whole history of every seat and filters it.
+-- The active booking is the newest, so it comes last in the index.
+--   SubPlan 1
+--     ->  Index Scan using idx__bookings_seat_id_fk on bookings b (actual rows=1 loops=192)
+--           Index Cond: (seat_id = s.id)
+--           Filter: ((NOT deleted) AND (state = ANY (ARRAY[$1, $2])))
+--           Rows Removed by Filter: 42
+--           Buffers: shared hit=861
+--   Execution Time: 1.746 ms
+--
+-- After: state is part of the index key, so the filter becomes an index condition.
+--   SubPlan 1
+--     ->  Index Only Scan using idx__bookings_seat_state on bookings b (actual rows=1 loops=192)
+--           Index Cond: ((seat_id = s.id) AND (state = ANY (ARRAY[$1, $2])))
+--           Heap Fetches: 0
+--           Buffers: shared hit=577
+--   Execution Time: 0.689 ms
+CREATE INDEX idx__bookings_seat_state ON bookings.bookings (seat_id, state)
+    WHERE deleted = false;
