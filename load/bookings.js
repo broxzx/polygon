@@ -12,23 +12,24 @@ const FREE_SEATS = __ENV.FREE_SEATS
     ? new SharedArray('free seats', () => open(__ENV.FREE_SEATS).split('\n').filter(l => l.trim() !== '').map(Number))
     : null;
 
-const STEPS = [1000, 1500, 2000, 2500];
+const STEPS = [1000, 1500, 2000, 2500, 3000, 4000, 4500, 5000];
+const WARMUP_S = 90, RAMP_S = 15, HOLD_S = 60;
+const STEP_S = RAMP_S + HOLD_S;
 const stepStages = (scale) => [
-    {target: 100 * scale, duration: '30s'},
-    {target: 100 * scale, duration: '90s'}, // JIT warm-up
+    {target: 100 * scale, duration: `${WARMUP_S}s`}, // JIT warm-up
     ...STEPS.flatMap(rps => [
-        {target: rps * scale, duration: '15s'},
-        {target: rps * scale, duration: '90s'},
+        {target: rps * scale, duration: `${RAMP_S}s`},
+        {target: rps * scale, duration: `${HOLD_S}s`},
     ]),
 ];
 
 function stepTag() {
     if (PROFILE !== 'steps') return 'all';
     const t = (Date.now() - exec.scenario.startTime) / 1000;
-    if (t < 120) return 'warmup';
-    const i = Math.floor((t - 120) / 105);
+    if (t < WARMUP_S) return 'warmup';
+    const i = Math.floor((t - WARMUP_S) / STEP_S);
     if (i >= STEPS.length) return 'end';
-    return (t - 120) % 105 < 15 ? 'ramp' : String(STEPS[i]);
+    return (t - WARMUP_S) % STEP_S < RAMP_S ? 'ramp' : String(STEPS[i]);
 }
 
 const stepThresholds = (scenario, limit) => PROFILE !== 'steps' ? {} : Object.fromEntries(

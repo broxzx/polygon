@@ -601,8 +601,8 @@
       "gridPos": {
         "h": 10,
         "w": 8,
-        "x": 0,
-        "y": 20
+        "x": 16,
+        "y": 10
       },
       "id": 3,
       "options": {
@@ -703,7 +703,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 30
+        "y": 20
       },
       "id": 9,
       "options": {
@@ -797,13 +797,39 @@
               }
             ]
           }
-        }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "{__name__=\"hikaricp_connections_active\", instance=\"host.docker.internal:8080\", job=\"spring-boot-application\", pool=\"HikariPool-1\"}"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 0,
-        "y": 38
+        "x": 12,
+        "y": 20
       },
       "id": 10,
       "options": {
@@ -896,7 +922,7 @@
   },
   "timezone": "browser",
   "title": "booking-service RED",
-  "version": 54,
+  "version": 59,
   "uid": "ad88jkp",
   "id": 2224633875808256
 }
