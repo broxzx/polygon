@@ -38,6 +38,6 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
         AND s.deleted = false
         AND s.event.deleted = false
       """)
-  @Lock(LockModeType.PESSIMISTIC_WRITE)
+  @Lock(LockModeType.WRITE)
   Optional<Seat> findByIdAndDeletedFalseAndEventDeletedFalse(Integer id);
 }

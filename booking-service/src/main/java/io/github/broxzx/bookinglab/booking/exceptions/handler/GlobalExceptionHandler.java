@@ -5,6 +5,8 @@ import io.github.broxzx.bookinglab.booking.exceptions.NotFoundException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
+import org.jspecify.annotations.NonNull;
+import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -30,13 +32,18 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     return ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, e.getMessage());
   }
 
-  /** 400 на @Valid: базовый ProblemDetail + поле "errors" вида {"email": "email is not valid"}. */
+  @ExceptionHandler(OptimisticLockingFailureException.class)
+  public ProblemDetail handleOptimisticLockException(OptimisticLockingFailureException e) {
+    return ProblemDetail.forStatusAndDetail(
+        HttpStatus.CONFLICT, "Seat was booked by another request");
+  }
+
   @Override
   protected ResponseEntity<Object> handleMethodArgumentNotValid(
       MethodArgumentNotValidException ex,
-      HttpHeaders headers,
-      HttpStatusCode status,
-      WebRequest request) {
+      @NonNull HttpHeaders headers,
+      @NonNull HttpStatusCode status,
+      @NonNull WebRequest request) {
     Map<String, String> errors = new LinkedHashMap<>();
     for (FieldError error : ex.getBindingResult().getFieldErrors()) {
       errors.putIfAbsent(

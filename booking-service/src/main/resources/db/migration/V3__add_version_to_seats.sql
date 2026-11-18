@@ -1,0 +1,2 @@
+ALTER TABLE bookings.seats
+    ADD COLUMN version BIGINT DEFAULT 0 NOT NULL;
