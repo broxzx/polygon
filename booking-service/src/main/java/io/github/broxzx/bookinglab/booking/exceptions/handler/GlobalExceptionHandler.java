@@ -5,7 +5,10 @@ import io.github.broxzx.bookinglab.booking.exceptions.NotFoundException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
+import lombok.extern.slf4j.Slf4j;
+import org.hibernate.exception.ConstraintViolationException;
 import org.jspecify.annotations.NonNull;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,6 +23,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @RestControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
   @ExceptionHandler(NotFoundException.class)
@@ -36,6 +40,19 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
   public ProblemDetail handleOptimisticLockException(OptimisticLockingFailureException e) {
     return ProblemDetail.forStatusAndDetail(
         HttpStatus.CONFLICT, "Seat was booked by another request");
+  }
+
+  @ExceptionHandler(DataIntegrityViolationException.class)
+  public ProblemDetail handleDataIntegrityViolationException(DataIntegrityViolationException e) {
+    if (e.getCause() instanceof ConstraintViolationException exception
+        && "idx__unique_active_booking".equalsIgnoreCase(exception.getConstraintName())) {
+      return ProblemDetail.forStatusAndDetail(
+          HttpStatus.CONFLICT, "Seat was booked by another request");
+    }
+
+    log.error("DataIntegrityViolationException occurred: ", e);
+    return ProblemDetail.forStatusAndDetail(
+        HttpStatus.INTERNAL_SERVER_ERROR, "Something went wrong, try again");
   }
 
   @Override

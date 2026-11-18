@@ -3,11 +3,9 @@ package io.github.broxzx.bookinglab.booking.domain.repository;
 import io.github.broxzx.bookinglab.booking.domain.entity.Booking;
 import io.github.broxzx.bookinglab.booking.domain.entity.Seat;
 import io.github.broxzx.bookinglab.booking.dto.SeatDto;
-import jakarta.persistence.LockModeType;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 
 public interface SeatRepository extends JpaRepository<Seat, Integer> {
@@ -38,6 +36,5 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
         AND s.deleted = false
         AND s.event.deleted = false
       """)
-  @Lock(LockModeType.WRITE)
   Optional<Seat> findByIdAndDeletedFalseAndEventDeletedFalse(Integer id);
 }
