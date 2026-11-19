@@ -29,3 +29,6 @@ management:
     distribution:
       percentiles-histogram:
         "[http.server.requests]": true
+
+booking:
+  concurrency: UNIQUE_ONLY

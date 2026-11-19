@@ -43,3 +43,46 @@ Only the seat row is locked (not the event); bookings for one seat are serialise
 1 active booking in 5/5 runs.
 Next: compare with optimistic locking (`@Version`), a unique partial index and SERIALIZABLE by
 throughput, error rate and p99 before making the final decision.
+## 2026-11-17 — Candidate 2: optimistic locking
+`@Version` on `seats` (V3) and `@Lock(OPTIMISTIC_FORCE_INCREMENT)` on the seat lookup. A booking does
+not modify the seat, so plain `OPTIMISTIC` would only re-check an unchanged version and let both
+transactions commit; `FORCE_INCREMENT` turns the read into `UPDATE seats SET version = v + 1 WHERE
+version = v` at flush, so only one transaction wins. No retry: the conflict surfaces at commit as
+`ObjectOptimisticLockingFailureException` and is mapped to 409. Result: 1 × 201, 199 × 409, 0 × 5xx.
+
+## 2026-11-18 — Candidate 3: partial unique index
+V4: `CREATE UNIQUE INDEX CONCURRENTLY idx__unique_active_booking ON bookings (seat_id)
+WHERE state IN ('NEW', 'PAID') AND deleted = false` — the same rule as the `exists` check, enforced
+by the database. No lock on the seat; the `exists` check stays as a fast path to 409.
+Only a violation of this index is mapped to 409 (Hibernate `ConstraintViolationException` with this
+constraint name); other integrity violations stay 500. Result: 1 × 201, 199 × 409, 0 × 5xx.
+Operational findings:
+- `CREATE INDEX CONCURRENTLY` waits for all open transactions, including Flyway's own transactional
+  advisory lock, so the migration blocks itself → `spring.flyway.postgresql.transactional-lock: false`.
+  An interrupted build leaves an INVALID index that must be dropped before retrying.
+- Flyway records that a migration ran, not that the schema still matches: an index dropped by hand
+  left V4 marked as successful while double bookings came back.
+
+## 2026-11-19 — Comparison under contention
+`booking.concurrency = PESSIMISTIC | OPTIMISTIC | UNIQUE_ONLY` switches the seat lookup; the V4
+index exists in all variants (in the first two the duplicate is rejected before the INSERT).
+200 concurrent bookings for one seat, 3 runs per variant (the first, JIT warm-up, discarded);
+all runs 1 × 201, 199 × 409, 0 × 5xx. `show-sql` was on, so absolute numbers are inflated.
+
+| Variant | median | p95 |
+|---|---|---|
+| Pessimistic | 99–110 ms | 185–186 ms |
+| Optimistic | 68–72 ms | 99–123 ms |
+| Unique index only | 64–67 ms | 96–100 ms |
+
+Pessimistic is the slowest because every request, including the 199 that end in 409, takes the
+seat row lock before its check, so all of them run one by one. With optimistic locking and the
+unique index the losers see the committed booking in parallel and fail fast. Optimistic locking
+looks cheap only because conflicts are not retried; with retries each attempt would conflict again.
+
+`FOR UPDATE SKIP LOCKED` was considered and rejected: a client books a specific seat, and skipping
+a locked seat would report it as taken while the holder may still roll back. It fits "any free
+seat" or job-queue style workloads.
+
+Next: a mixed load (many seats plus one hot seat) to check whether pessimistic locking holds pool
+connections while waiting and slows down bookings of other seats. Final decision after that run.

@@ -1,5 +1,6 @@
 package io.github.broxzx.bookinglab.booking.service;
 
+import io.github.broxzx.bookinglab.booking.config.properties.BookingProperties;
 import io.github.broxzx.bookinglab.booking.domain.entity.Booking;
 import io.github.broxzx.bookinglab.booking.domain.entity.Seat;
 import io.github.broxzx.bookinglab.booking.domain.repository.BookingRepository;
@@ -18,12 +19,22 @@ public class BookingService {
 
   private final BookingRepository bookingRepository;
   private final SeatRepository seatRepository;
+  private final BookingProperties bookingProperties;
 
   @Transactional
   public BookingDto createBooking(CreateBookingDto createBookingDto) {
     Seat seat =
-        seatRepository
-            .findByIdAndDeletedFalseAndEventDeletedFalse(createBookingDto.seatId())
+        (switch (bookingProperties.getConcurrency()) {
+              case OPTIMISTIC ->
+                  seatRepository.findByIdAndDeletedFalseAndEventDeletedFalseWithOptimisticLock(
+                      createBookingDto.seatId());
+              case PESSIMISTIC ->
+                  seatRepository.findByIdAndDeletedFalseAndEventDeletedFalseWithPessimisticLock(
+                      createBookingDto.seatId());
+              case UNIQUE_ONLY ->
+                  seatRepository.findByIdAndDeletedFalseAndEventDeletedFalse(
+                      createBookingDto.seatId());
+            })
             .orElseThrow(() -> new NotFoundException(Seat.class, createBookingDto.seatId()));
 
     if (bookingRepository.existsBySeatIdAndDeletedFalseAndStateIn(
